@@ -3,16 +3,16 @@ export default function Index() {
     <div className="max-w-6xl m-auto p-4 md:py-0">
       <header></header>
       <main>
-        <section className="text my-16 sm:my-16 md:my-24">
+        <section className="text my-16 sm:my-16 md:my-24 max-w-md">
           <p className="mb-3">Hey! 👋</p>
           <h1 className="mb-3">
             I'm <span className="text-white font-semibold">Kenny Goff</span>, a
-            designer, developer, and game master.
+            designer and developer.
           </h1>
-          <p className="mb-3 max-w-md">
-            I enjoy making everything from web sites to apps and games. I'm a
-            Notion power user and TTRPG enthusiast. I run an indie game and
-            product development studio,{" "}
+          <p className="mb-3">
+            I enjoy building tools to save time and designing games to spend it.
+            I'm a senior web engineer, a TTRPG game master, and a dive bar dart
+            player. I run an indie game and product development studio,{" "}
             <a
               href="https://inwavelabs.com"
               className="text-white font-semibold underline"
@@ -27,8 +27,8 @@ export default function Index() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <div>
               <img
-                src="/images/dt-preview.png"
-                alt="Screenshot of pixel art wrestling game, Double Turn"
+                src="/images/project-5edmscreen-2.png"
+                alt="Screenshot of 5e DM Screen template"
                 className="rounded-xl mb-6"
               />
               <h3 className="font-bold text-white my-2 text-lg">
@@ -45,8 +45,8 @@ export default function Index() {
             </div>
             <div>
               <img
-                src="/images/dt-preview.png"
-                alt="Screenshot of pixel art wrestling game, Double Turn"
+                src="/images/project-5ecampaignwiki.png"
+                alt="Screenshot of 5e Campaign Wiki template"
                 className="rounded-xl mb-6"
               />
               <h3 className="font-bold text-white my-2 text-lg">
@@ -86,7 +86,7 @@ export default function Index() {
                 Buy on itch.io
               </a> */}
               <a
-                className="text-white text-sm font-semibold mt-4 inline-block"
+                className="text-sm font-semibold mt-4 inline-block hover:text-sky-400 text-white hover:underline"
                 href="https://inwavelabs.com/double-turn"
               >
                 Learn more &rarr;
