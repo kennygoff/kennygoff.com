@@ -11,7 +11,7 @@ import stylesheet from "~/tailwind.css";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "Kenny Goff",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -21,7 +21,7 @@ export const links: LinksFunction = () => [
 
 export default function App() {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-slate-900 text-slate-200">
       <head>
         <Meta />
         <Links />
