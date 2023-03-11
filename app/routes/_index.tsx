@@ -27,7 +27,7 @@ export default function Index() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <div>
               <img
-                src="/images/project-5edmscreen-2.png"
+                src="/images/project-5edmscreen.png"
                 alt="Screenshot of 5e DM Screen template"
                 className="rounded-xl mb-6"
               />
