@@ -8,7 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import stylesheet from "~/tailwind.css";
-import Fathom from "./components/fathom";
+import Fathom from "~/components/fathom";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",

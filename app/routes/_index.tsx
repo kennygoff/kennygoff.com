@@ -1,3 +1,5 @@
+import { Link } from "@remix-run/react";
+
 export default function Index() {
   return (
     <div className="max-w-6xl m-auto p-4 md:py-0">
@@ -125,12 +127,9 @@ export default function Index() {
         <div>Kenny Goff © 2023</div>
         <div>
           Made with <span style={{ fontFamily: "none" }}>❤</span> by{" "}
-          <a
-            href="https://kennygoff.com"
-            className="text-white underline font-semibold"
-          >
+          <Link to="/" className="text-white underline font-semibold">
             Kenny Goff
-          </a>
+          </Link>
         </div>
       </footer>
     </div>
