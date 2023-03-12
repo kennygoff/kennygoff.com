@@ -15,3 +15,4 @@
   for = "/build/*"
   [headers.values]
     "Cache-Control" = "public, max-age=31536000, s-maxage=31536000"
+    "Content-Security-Policy" = "default-src 'self' 'kennygoff.com' 'www.kennygoff.com' 'calm-thorn-side.kennygoff.com';"
