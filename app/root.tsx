@@ -8,6 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import stylesheet from "~/tailwind.css";
+import Fathom from "./components/fathom";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -31,6 +32,7 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <Fathom />
       </body>
     </html>
   );
