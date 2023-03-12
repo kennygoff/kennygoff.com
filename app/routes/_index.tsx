@@ -1,4 +1,5 @@
-import { Link } from "@remix-run/react";
+import { Footer } from "~/components/footer";
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
 
 export default function Index() {
   return (
@@ -41,12 +42,6 @@ export default function Index() {
                 look up 5e rules, player stats, in this digial DM screen that is
                 easy to extend and modify.
               </p>
-              {/* <a
-                className="text-sm font-semibold mt-4 inline-block hover:text-sky-400 text-white hover:underline"
-                href="https://kennygoff.notion.site/5e-DM-Screen-Template-94918eaae3024973831d3eae4d7810b1"
-              >
-                Get this template &rarr;
-              </a> */}
               <a
                 className="text-sm font-semibold mt-4 sm:inline-block text-white hover:bg-sky-600 active:bg-sky-600 py-2 px-3 bg-sky-500 rounded block text-center"
                 href="https://kennygoff.notion.site/5e-DM-Screen-Template-94918eaae3024973831d3eae4d7810b1"
@@ -72,9 +67,6 @@ export default function Index() {
               <span className="text-sm font-semibold mt-4 sm:inline-block text-white py-2 px-3 bg-slate-700 rounded block text-center">
                 Coming soon
               </span>
-              {/* <span className="inline-block rounded-sm font-bold uppercase text-xs py-0.5 px-2 bg-slate-700 text-white mt-4">
-                Coming soon
-              </span> */}
             </div>
             <div>
               <img
@@ -92,13 +84,6 @@ export default function Index() {
                 </a>{" "}
                 and <a href="https://inwave.itch.io/double-turn">itch.io</a>.
               </p>
-              {/* <a
-                href="https://inwave.itch.io/double-turn"
-                className="py-2 px-4 rounded"
-                style={{ backgroundColor: "#ff2449" }}
-              >
-                Buy on itch.io
-              </a> */}
               <div className="flex flex-col gap-2 sm:flex-row mt-4">
                 <a
                   className="text-sm font-semibold sm:inline-block text-white hover:bg-sky-600 active:bg-sky-600 py-2 px-3 bg-sky-500 rounded block text-center"
@@ -113,25 +98,31 @@ export default function Index() {
                   Learn more &rarr;
                 </a>
               </div>
-              {/* <a
-                className="text-sm font-semibold mt-4 inline-block hover:text-sky-400 text-white hover:underline"
-                href="https://inwavelabs.com/double-turn"
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="p-6 bg-slate-700 rounded-xl my-12 flex flex-col sm:flex-row sm:items-center gap-4 sm:max-w-lg sm:mx-auto">
+            <img
+              src="/images/kg.jpg"
+              alt="Photograph of Kenny Goff"
+              className="rounded-full w-20 h-20"
+            />
+            <div>
+              <h2 className="font-bold mb-1">Want to chat?</h2>
+              <p>If you'd like to get in touch, shoot me an email!</p>
+              <a
+                className="text-sm font-semibold mt-4 gap-1 hover:text-sky-400 text-white hover:underline inline-flex"
+                href="mailto:hi@kennygoff.com"
               >
-                Learn more &rarr;
-              </a> */}
+                <EnvelopeIcon className="h-5 w-5" />
+                <span>hi@kennygoff.com</span>
+              </a>
             </div>
           </div>
         </section>
       </main>
-      <footer className="flex flex-row justify-between border-t border-slate-600 py-4 mt-16 text-sm">
-        <div>Kenny Goff © 2023</div>
-        <div>
-          Made with <span style={{ fontFamily: "none" }}>❤</span> by{" "}
-          <Link to="/" className="text-white underline font-semibold">
-            Kenny Goff
-          </Link>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
