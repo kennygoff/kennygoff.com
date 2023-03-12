@@ -39,9 +39,18 @@ export default function Index() {
                 look up 5e rules, player stats, in this digial DM screen that is
                 easy to extend and modify.
               </p>
-              <span className="inline-block rounded-sm font-bold uppercase text-xs py-0.5 px-2 bg-slate-700 text-white mt-4">
-                Coming soon
-              </span>
+              {/* <a
+                className="text-sm font-semibold mt-4 inline-block hover:text-sky-400 text-white hover:underline"
+                href="https://kennygoff.notion.site/5e-DM-Screen-Template-94918eaae3024973831d3eae4d7810b1"
+              >
+                Get this template &rarr;
+              </a> */}
+              <a
+                className="text-sm font-semibold mt-4 sm:inline-block text-white hover:bg-sky-600 active:bg-sky-600 py-2 px-3 bg-sky-500 rounded block text-center"
+                href="https://kennygoff.notion.site/5e-DM-Screen-Template-94918eaae3024973831d3eae4d7810b1"
+              >
+                Get 5e DM Screen &rarr;
+              </a>
             </div>
             <div>
               <img
@@ -50,7 +59,7 @@ export default function Index() {
                 className="rounded-xl mb-6"
               />
               <h3 className="font-bold text-white my-2 text-lg">
-                5e Campaign Wiki for Notion{" "}
+                5e Campaign Wiki for Notion
               </h3>
               <p className="my-2">
                 A Notion template to help you run your 5e campaign. Set up with
@@ -58,9 +67,12 @@ export default function Index() {
                 encounters and more. Plan and run your games with ease all
                 within Notion.
               </p>
-              <span className="inline-block rounded-sm font-bold uppercase text-xs py-0.5 px-2 bg-slate-700 text-white mt-4">
+              <span className="text-sm font-semibold mt-4 sm:inline-block text-white py-2 px-3 bg-slate-700 rounded block text-center">
                 Coming soon
               </span>
+              {/* <span className="inline-block rounded-sm font-bold uppercase text-xs py-0.5 px-2 bg-slate-700 text-white mt-4">
+                Coming soon
+              </span> */}
             </div>
             <div>
               <img
@@ -85,12 +97,26 @@ export default function Index() {
               >
                 Buy on itch.io
               </a> */}
-              <a
+              <div className="flex flex-col gap-2 sm:flex-row mt-4">
+                <a
+                  className="text-sm font-semibold sm:inline-block text-white hover:bg-sky-600 active:bg-sky-600 py-2 px-3 bg-sky-500 rounded block text-center"
+                  href="https://store.steampowered.com/app/762680/Double_Turn/"
+                >
+                  Buy on Steam &rarr;
+                </a>
+                <a
+                  className="text-sm font-semibold sm:inline-block text-white hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded block text-center"
+                  href="https://inwavelabs.com/double-turn"
+                >
+                  Learn more &rarr;
+                </a>
+              </div>
+              {/* <a
                 className="text-sm font-semibold mt-4 inline-block hover:text-sky-400 text-white hover:underline"
                 href="https://inwavelabs.com/double-turn"
               >
                 Learn more &rarr;
-              </a>
+              </a> */}
             </div>
           </div>
         </section>
