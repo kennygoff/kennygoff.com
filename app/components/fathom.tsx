@@ -7,7 +7,9 @@ const Fathom = () => {
 
   useEffect(() => {
     load("HMQYESLQ", {
-      includedDomains: ["kennygoff-new.netlify.app", "kennygoff.com"],
+      url: "https://calm-thorn-side.kennygoff.com/script.js",
+      includedDomains: ["*.kennygoff.com"],
+      excludedDomains: ["kennygoff.netlify.app"],
     });
   }, []);
 
