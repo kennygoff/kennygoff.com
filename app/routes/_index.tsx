@@ -45,8 +45,8 @@ export default function Index() {
               </h3>
               <p className="my-2">
                 A DM Screen and 5e quick reference in a Notion template. Quickly
-                look up 5e rules, player stats, in this digial DM screen that is
-                easy to extend and modify.
+                look up 5e rules, player stats, and more in this digial DM
+                screen that is easy to extend and modify.
               </p>
               <a
                 className="text-sm font-semibold mt-4 sm:inline-block text-white hover:bg-sky-600 active:bg-sky-600 py-2 px-3 bg-sky-500 rounded block text-center"
