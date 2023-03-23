@@ -26,7 +26,7 @@ export const Newsletter = () => (
             <span>Email</span>
           </label>
           <input type="hidden" value="1" name="embed" />
-          <div className="flex flex-row gap-2 w-full max-w-md items-center">
+          <div className="flex flex-col sm:flex-row gap-2 w-full sm:max-w-md sm:items-center">
             <input
               type="email"
               name="email"
@@ -36,7 +36,7 @@ export const Newsletter = () => (
             <input
               type="submit"
               value="Subscribe"
-              className="bg-sky-600 hover:bg-sky-700 rounded px-3 py-1.5 font-semibold text-base hover:shadow-sm hover:cursor-pointer"
+              className="bg-sky-600 hover:bg-sky-700 rounded px-3 py-1.5 font-semibold text-base hover:shadow-sm hover:cursor-pointer self-start"
             />
           </div>
         </form>
