@@ -1,11 +1,17 @@
 import { Footer } from "~/components/footer";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
+import { Link } from "@remix-run/react";
+import { Newsletter } from "~/components/newsletter";
 
 export default function Index() {
   return (
-    <div className="max-w-6xl m-auto p-4 md:py-0">
-      <header></header>
-      <main>
+    <div className="md:py-0">
+      <header className="max-w-6xl m-auto p-4 md:py-4">
+        <Link to="/">
+          <img src="/images/logo-square.svg" className="w-8 h-8" alt="Home" />
+        </Link>
+      </header>
+      <main className="max-w-6xl m-auto p-4">
         <section className="text my-16 sm:my-16 md:my-24 max-w-md">
           <p className="mb-3">Hey! 👋</p>
           <h1 className="mb-3">
@@ -25,7 +31,7 @@ export default function Index() {
             .
           </p>
         </section>
-        <section>
+        <section className="mb-12">
           <h2 className="mb-4 font-semibold text-white text-xl">My projects</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <div>
@@ -101,6 +107,57 @@ export default function Index() {
             </div>
           </div>
         </section>
+        <section className="mb-12">
+          <h2 className="mb-4 font-semibold text-white text-xl">Articles</h2>
+          <p className="mb-2">
+            Here's a collection of articles I've written, spanning a few
+            different topics. I treat this much more like a{" "}
+            <a
+              href="https://joelhooks.com/digital-garden"
+              className="underline"
+            >
+              digital garden
+            </a>{" "}
+            than a chronological blog, so I'll keep this section updated over
+            time with my favorite posts, musings, ideas, and advice. As I write
+            more frequently I'll keep this updated and more organized. It's an
+            ever evolving project as is the rest of this site.
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              <Link
+                to="/using-notion-dm-screen"
+                className="underline font-semibold"
+              >
+                Using Notion as a DM Screen
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/posts/a-new-freelancers-guide-to-freelancing"
+                className="underline font-semibold"
+              >
+                A new freelancer's guide to freelancing
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/posts/inwave-labs-4-years"
+                className="underline font-semibold"
+              >
+                Freelance, burnout, and Double Turn: 4 Years of Inwave Labs
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/posts/dark-mode-and-stripe-mode"
+                className="underline font-semibold"
+              >
+                Dark mode and Stripe mode
+              </Link>
+            </li>
+          </ul>
+        </section>
         <section>
           <div className="p-6 bg-slate-700 rounded-xl my-12 flex flex-col sm:flex-row sm:items-center gap-4 sm:max-w-lg sm:mx-auto">
             <img
@@ -122,6 +179,7 @@ export default function Index() {
           </div>
         </section>
       </main>
+      <Newsletter />
       <Footer />
     </div>
   );

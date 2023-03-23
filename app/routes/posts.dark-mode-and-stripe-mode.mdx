@@ -1,0 +1,60 @@
+---
+title: Dark mode and Stripe mode
+published: 2019-09-16
+updated: 2023-03-22
+oneliner:
+  'Theming my website for 2019 and beyond with the popular "dark mode" and
+  "stripe mode" switch'
+meta:
+  title: Dark mode and Stripe mode
+  description: How to use Notion to build a DM Screen to run D&D 5e games
+---
+
+import { PostCallout } from "~/components/post-callout";
+import { PostDate } from "~/components/post-date";
+
+# {attributes.title}
+
+<PostDate date={attributes.published} />
+
+<PostCallout
+  title={`Update ${attributes.updated.toLocaleDateString()}`}
+  content="I've redesigned my site a few times since this post and no longer have the Stripe mode. Bummer! I've also since moved on to Remix and Tailwind for building this site."
+/>
+
+![Website screenshot with dark mode](/images/posts/dark-mode.png)
+
+Just about every website and application nowadays has a dark mode toggle. It's a
+great feature for people who prefer reading on a screen with dark backgrounds
+and light text. Other people really like colorful gradients at slight angles and
+the growing trend is "borrowing" [Stripe's](https://stripe.com) website design.
+So today I'm launching both on my website!
+
+![Website screenshot with Stripe theme](/images/posts/stripe-mode.png)
+
+Both the Dark and the Stripe themes are available in the theme switcher in my
+site header. The dark mode provides a clean interface great for viewing without
+the bright glaring lights of a lighter theme. And Stripe mode fills the need for
+this site to have basically the same design as Stripe. Just head to the
+[homepage](/) and tilt your head 15 degrees. Between operating systems offering
+native support for dark theming and more and more sites yoinking all the CSS off
+of stripe's homepage, it's imperative to offer those same experiences on my own
+site.
+
+![Screenshots of Stripe clones](/images/posts/stripe-clones.png)
+
+If you're interested in seeing how it's implemented, you can check out my
+website on [GitHub](https://github.com/kennygoff/kennygoff.com)! I use
+[emotion](https://emotion.sh) for styling, and simply add a class name for each
+team when loading the page. Dark mode is simple, but Stripe mode was a bit more
+complex since I needed to add a lot of components and layout just to handle it.
+Using emotion's parent selector syntax I was able to make the many modifications
+needed to slap stripes on my page.
+
+I originally used emotion-theming, but that had problems since Gatsby builds the
+CSS on deploy. The simpler class name approach allowed me to overcome some
+problems like the "style flashing" that occurs using emotion's built-in theming
+provider without server-side rendering and the hollow emptiness of my personal
+website looking like a Stripe clone. There's still some issues to work out, like
+the inability to simply reference the "active" theme in CSS, like I could in
+emotion's theme provider.
