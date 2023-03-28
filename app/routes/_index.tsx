@@ -126,6 +126,14 @@ export default function Index() {
           <ul className="list-disc list-inside">
             <li>
               <Link
+                to="/beyond-wave-echo-cave"
+                className="underline font-semibold"
+              >
+                Beyond Wave Echo Cave: Expanding Lost Mines of Phandelver
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/using-notion-dm-screen"
                 className="underline font-semibold"
               >
