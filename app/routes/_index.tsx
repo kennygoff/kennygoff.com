@@ -119,52 +119,76 @@ export default function Index() {
               digital garden
             </a>{" "}
             than a chronological blog, so I'll keep this section updated over
-            time with my favorite posts, musings, ideas, and advice. As I write
-            more frequently I'll keep this updated and more organized. It's an
+            time with my favorite posts, musings, ideas, and advice. It's an
             ever evolving project as is the rest of this site.
           </p>
-          <ul className="list-disc list-inside">
-            <li>
-              <Link
-                to="/beyond-wave-echo-cave"
-                className="underline font-semibold"
-              >
-                Beyond Wave Echo Cave: Expanding Lost Mines of Phandelver
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/using-notion-dm-screen"
-                className="underline font-semibold"
-              >
-                Using Notion as a DM Screen
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/posts/a-new-freelancers-guide-to-freelancing"
-                className="underline font-semibold"
-              >
-                A new freelancer's guide to freelancing
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/posts/inwave-labs-4-years"
-                className="underline font-semibold"
-              >
-                Freelance, burnout, and Double Turn: 4 Years of Inwave Labs
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/posts/dark-mode-and-stripe-mode"
-                className="underline font-semibold"
-              >
-                Dark mode and Stripe mode
-              </Link>
-            </li>
-          </ul>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 [grid-template-rows:masonry]">
+            <div className="border border-slate-600 rounded-lg overflow-hidden">
+              <h3 className="px-3 py-1 bg-slate-600 font-semibold text-white text-sm">
+                Running D&D and TTRPGs
+              </h3>
+              <ul className="px-3 py-2 [&>li]:py-1 list-disc ml-4">
+                <li>
+                  <Link
+                    to="/owlbear-rodeo-the-painless-virtual-tabletop"
+                    className="underline font-semibold"
+                  >
+                    Owlbear Rodeo: The painless virtual tabletop
+                  </Link>{" "}
+                  <span className="rounded ml-1 text-xs bg-emerald-600 text-white uppercase px-1 py-0.5 font-semibold">
+                    New
+                  </span>
+                </li>
+                <li>
+                  <Link
+                    to="/beyond-wave-echo-cave"
+                    className="underline font-semibold"
+                  >
+                    Beyond Wave Echo Cave: Expanding Lost Mines of Phandelver
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/using-notion-dm-screen"
+                    className="underline font-semibold"
+                  >
+                    Using Notion as a DM Screen
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="border border-slate-600 rounded-lg overflow-hidden">
+              <h3 className="px-3 py-1 bg-slate-600 font-semibold text-white text-sm">
+                Miscellaneous
+              </h3>
+              <ul className="px-3 py-2 [&>li]:py-1 list-disc ml-4">
+                <li>
+                  <Link
+                    to="/posts/a-new-freelancers-guide-to-freelancing"
+                    className="underline font-semibold"
+                  >
+                    A new freelancer's guide to freelancing
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/posts/inwave-labs-4-years"
+                    className="underline font-semibold"
+                  >
+                    Freelance, burnout, and Double Turn: 4 Years of Inwave Labs
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/posts/dark-mode-and-stripe-mode"
+                    className="underline font-semibold"
+                  >
+                    Dark mode and Stripe mode
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
         <section>
           <div className="p-6 bg-slate-700 rounded-xl my-12 flex flex-col sm:flex-row sm:items-center gap-4 sm:max-w-lg sm:mx-auto">
