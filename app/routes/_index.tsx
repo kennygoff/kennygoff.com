@@ -38,7 +38,7 @@ export default function Index() {
               <img
                 src="/images/project-5edmscreen.png"
                 alt="Screenshot of 5e DM Screen template"
-                className="rounded-xl mb-6"
+                className="rounded-xl mb-6 aspect-video"
               />
               <h3 className="font-bold text-white my-2 text-lg">
                 5e DM Screen for Notion
@@ -59,7 +59,7 @@ export default function Index() {
               <img
                 src="/images/project-5ecampaignwiki.png"
                 alt="Screenshot of 5e Campaign Wiki template"
-                className="rounded-xl mb-6"
+                className="rounded-xl mb-6 aspect-video"
               />
               <h3 className="font-bold text-white my-2 text-lg">
                 5e Campaign Wiki for Notion
@@ -78,7 +78,7 @@ export default function Index() {
               <img
                 src="/images/dt-preview.png"
                 alt="Screenshot of pixel art wrestling game, Double Turn"
-                className="rounded-xl mb-6"
+                className="rounded-xl mb-6 aspect-video"
               />
               <h3 className="font-bold text-white my-2 text-lg">Double Turn</h3>
               <p className="my-2">
