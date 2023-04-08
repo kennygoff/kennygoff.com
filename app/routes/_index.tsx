@@ -74,7 +74,7 @@ export default function Index() {
                 encounters and more. Plan and run your games with ease all
                 within Notion.
               </p>
-              <span className="text-sm font-semibold mt-4 sm:inline-block text-white py-2 px-3 bg-slate-700 rounded block text-center">
+              <span className="text-sm font-bold mt-4 sm:inline-block text-slate-200 py-2 px-3 bg-slate-700 rounded block text-center">
                 Coming soon
               </span>
             </div>
@@ -101,7 +101,7 @@ export default function Index() {
                   Buy on Steam &rarr;
                 </LinkButton>
                 <a
-                  className="text-sm font-semibold sm:inline-block text-white hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded block text-center"
+                  className="text-sm font-bold sm:inline-block text-slate-100 hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded block text-center"
                   href="https://inwavelabs.com/double-turn"
                 >
                   Learn more &rarr;
