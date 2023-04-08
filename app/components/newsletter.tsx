@@ -36,7 +36,7 @@ export const Newsletter = () => (
             <input
               type="submit"
               value="Subscribe"
-              className="bg-sky-600 hover:bg-sky-700 rounded px-3 py-1.5 font-semibold text-base hover:shadow-sm hover:cursor-pointer self-start"
+              className="text-white bg-sky-600 hover:bg-sky-700 rounded px-3 py-1.5 font-semibold text-base hover:shadow-sm hover:cursor-pointer self-start"
             />
           </div>
         </form>

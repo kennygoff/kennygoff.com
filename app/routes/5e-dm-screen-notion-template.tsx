@@ -40,7 +40,7 @@ export default function Articles() {
               on the topic.
             </p>
             <a
-              className="text-sm font-semibold mt-4 sm:inline-block text-white hover:bg-sky-600 active:bg-sky-600 py-2 px-3 bg-sky-500 rounded block text-center"
+              className="text-sm font-semibold mt-4 sm:inline-block text-white hover:bg-sky-700 active:bg-sky-700 py-2 px-3 bg-sky-600 rounded block text-center"
               href="https://kennygoff.notion.site/5e-DM-Screen-Template-94918eaae3024973831d3eae4d7810b1"
             >
               Get 5e DM Screen, free &rarr;

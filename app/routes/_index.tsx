@@ -2,6 +2,7 @@ import { Footer } from "~/components/footer";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { Link } from "@remix-run/react";
 import { Newsletter } from "~/components/newsletter";
+import { LinkButton } from "~/components/link-button";
 
 export default function Index() {
   return (
@@ -50,12 +51,11 @@ export default function Index() {
                 look up 5e rules, player stats, and more in this digial DM
                 screen that is easy to extend and modify.
               </p>
-              <a
-                className="text-sm font-semibold mt-4 sm:inline-block text-white hover:bg-sky-600 active:bg-sky-600 py-2 px-3 bg-sky-500 rounded block text-center"
-                href="https://kennygoff.notion.site/5e-DM-Screen-Template-94918eaae3024973831d3eae4d7810b1"
-              >
-                Get 5e DM Screen &rarr;
-              </a>
+              <div className="flex flex-col gap-2 sm:flex-row mt-4">
+                <LinkButton href="https://kennygoff.notion.site/5e-DM-Screen-Template-94918eaae3024973831d3eae4d7810b1">
+                  Get 5e DM Screen &rarr;
+                </LinkButton>
+              </div>
             </div>
             <div>
               <img
@@ -97,12 +97,9 @@ export default function Index() {
                 and <a href="https://inwave.itch.io/double-turn">itch.io</a>.
               </p>
               <div className="flex flex-col gap-2 sm:flex-row mt-4">
-                <a
-                  className="text-sm font-semibold sm:inline-block text-white hover:bg-sky-600 active:bg-sky-600 py-2 px-3 bg-sky-500 rounded block text-center"
-                  href="https://store.steampowered.com/app/762680/Double_Turn/"
-                >
+                <LinkButton href="https://store.steampowered.com/app/762680/Double_Turn/">
                   Buy on Steam &rarr;
-                </a>
+                </LinkButton>
                 <a
                   className="text-sm font-semibold sm:inline-block text-white hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded block text-center"
                   href="https://inwavelabs.com/double-turn"
@@ -141,7 +138,7 @@ export default function Index() {
                   >
                     Owlbear Rodeo: The painless virtual tabletop
                   </Link>{" "}
-                  <span className="rounded ml-1 text-xs bg-emerald-600 text-white uppercase px-1 py-0.5 font-semibold">
+                  <span className="rounded ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
                     New
                   </span>
                 </li>
