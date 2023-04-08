@@ -1,8 +1,18 @@
-import { Footer } from "~/components/footer";
-import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { Link } from "@remix-run/react";
+import type { MetaFunction } from "@remix-run/node";
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
+
 import { Newsletter } from "~/components/newsletter";
 import { LinkButton } from "~/components/link-button";
+import { Footer } from "~/components/footer";
+
+export const meta: MetaFunction = () => {
+  return {
+    title: "Kenny Goff | Designer, developer, and TTRPG game master",
+    description:
+      "Kenny Goff is a designer and developer. He's a web engineer, TTRPG game master, and runs an indie game and product development studio.",
+  };
+};
 
 export default function Index() {
   return (
@@ -48,7 +58,7 @@ export default function Index() {
               </h3>
               <p className="my-2">
                 A DM Screen and 5e quick reference in a Notion template. Quickly
-                look up 5e rules, player stats, and more in this digial DM
+                look up 5e rules, player stats, and more in this digital DM
                 screen that is easy to extend and modify.
               </p>
               <div className="flex flex-col gap-2 sm:flex-row mt-4">
