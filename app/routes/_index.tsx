@@ -47,6 +47,35 @@ export default function Index() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <div>
               <img
+                src="/images/project-5ecampaignwiki.png"
+                alt="Screenshot of 5e Campaign Wiki template"
+                className="rounded-xl mb-6 aspect-video"
+                width="640"
+                height="360"
+              />
+              <h3 className="font-bold text-white my-2 text-lg">
+                5e Campaign Wiki for Notion
+              </h3>
+              <p className="my-2">
+                A Notion template to help you run your 5e campaign. Set up with
+                ready-to-use databases for players, NPCs, session notes,
+                encounters and more. Plan and run your games with ease all
+                within Notion.
+              </p>
+              <div className="flex flex-col gap-2 sm:flex-row mt-4">
+                <LinkButton href="https://kennygoff.notion.site/5e-Campaign-Wiki-2234b289a06d47c6967a99a934864c6a">
+                  Get 5e Campaign Wiki &rarr;
+                </LinkButton>
+                <Link
+                  className="text-sm font-bold sm:inline-block text-slate-100 hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded block text-center"
+                  to="/5e-campaign-wiki-notion-template"
+                >
+                  Learn more &rarr;
+                </Link>
+              </div>
+            </div>
+            <div>
+              <img
                 src="/images/project-5edmscreen.png"
                 alt="Screenshot of 5e DM Screen template"
                 className="rounded-xl mb-6 aspect-video"
@@ -65,28 +94,13 @@ export default function Index() {
                 <LinkButton href="https://kennygoff.notion.site/5e-DM-Screen-Template-94918eaae3024973831d3eae4d7810b1">
                   Get 5e DM Screen &rarr;
                 </LinkButton>
+                <Link
+                  className="text-sm font-bold sm:inline-block text-slate-100 hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded block text-center"
+                  to="/5e-dm-screen-notion-template"
+                >
+                  Learn more &rarr;
+                </Link>
               </div>
-            </div>
-            <div>
-              <img
-                src="/images/project-5ecampaignwiki.png"
-                alt="Screenshot of 5e Campaign Wiki template"
-                className="rounded-xl mb-6 aspect-video"
-                width="640"
-                height="360"
-              />
-              <h3 className="font-bold text-white my-2 text-lg">
-                5e Campaign Wiki for Notion
-              </h3>
-              <p className="my-2">
-                A Notion template to help you run your 5e campaign. Set up with
-                ready-to-use databases for players, NPCs, session notes,
-                encounters and more. Plan and run your games with ease all
-                within Notion.
-              </p>
-              <span className="text-sm font-bold mt-4 sm:inline-block text-slate-200 py-2 px-3 bg-slate-700 rounded block text-center">
-                Coming soon
-              </span>
             </div>
             <div>
               <img
