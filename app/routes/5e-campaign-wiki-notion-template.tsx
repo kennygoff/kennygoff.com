@@ -29,26 +29,26 @@ export default function Articles() {
             className="w-full sm:max-w-sm md:max-w-md lg:max-w-lg"
           />
           <div>
-            <h2 className="text-2xl">
-              The simplest reference tool your 5e games
-            </h2>
+            <h2 className="text-2xl">Your home for running 5e campaigns</h2>
             <p className="my-2">
-              A DM Screen and 5e quick reference in a Notion template. Quickly
-              look up 5e rules, player stats, and more in this digial DM screen
-              that is easy to extend and modify.
+              A full campaign wiki for 5e all in a Notion template. Plan your
+              sessions, track your NPCs, and take notes in this robust campaign
+              wiki.
             </p>
             <ul className="list-disc list-inside">
-              <li>Quick reference for D&D 5e rules</li>
-              <li>Easy to read at a glance</li>
-              <li>Fully customizable</li>
+              <li>Take Session notes and track Encounters</li>
+              <li>Player, NPC, and Monster references</li>
+              <li>Track quests and rumors</li>
+              <li>Easy to expand and extend</li>
             </ul>
             <p className="my-2">
               Duplicate this template into your Notion and customize it to fit
-              your campaign. Need some ideas for how to use this? Check out{" "}
-              <Link to="/using-notion-dm-screen" className="underline">
+              your campaign. New to Notion and want a breakdown of some basic
+              features? Check out{" "}
+              <Link to="/notion-features-for-running-dnd" className="underline">
                 my post
               </Link>{" "}
-              on the topic.
+              on the Notion features to use for D&D.
             </p>
             <LinkButton href="https://kennygoff.notion.site/5e-Campaign-Wiki-2234b289a06d47c6967a99a934864c6a">
               Get 5e Campaign Wiki, free &rarr;
