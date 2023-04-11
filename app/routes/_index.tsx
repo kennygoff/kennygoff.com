@@ -157,14 +157,22 @@ export default function Index() {
               <ul className="px-3 py-2 [&>li]:py-1 list-disc ml-4">
                 <li>
                   <Link
-                    to="/owlbear-rodeo-the-painless-virtual-tabletop"
+                    to="/notion-features-for-running-dnd"
                     className="underline font-semibold"
                   >
-                    Owlbear Rodeo: The painless virtual tabletop
+                    Helpful Notion features for running D&D
                   </Link>{" "}
                   <span className="rounded ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
                     New
                   </span>
+                </li>
+                <li>
+                  <Link
+                    to="/owlbear-rodeo-the-painless-virtual-tabletop"
+                    className="underline font-semibold"
+                  >
+                    Owlbear Rodeo: The painless virtual tabletop
+                  </Link>
                 </li>
                 <li>
                   <Link
