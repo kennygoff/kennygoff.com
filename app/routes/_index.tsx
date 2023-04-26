@@ -157,14 +157,22 @@ export default function Index() {
               <ul className="px-3 py-2 [&>li]:py-1 list-disc ml-4">
                 <li>
                   <Link
-                    to="/notion-features-for-running-dnd"
+                    to="/digital-dice-vs-physical-dice"
                     className="underline font-semibold"
                   >
-                    Helpful Notion features for running D&D
+                    Digital dice vs physical dice
                   </Link>{" "}
                   <span className="rounded ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
                     New
                   </span>
+                </li>
+                <li>
+                  <Link
+                    to="/notion-features-for-running-dnd"
+                    className="underline font-semibold"
+                  >
+                    Helpful Notion features for running D&D
+                  </Link>
                 </li>
                 <li>
                   <Link
