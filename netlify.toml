@@ -19,4 +19,4 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    "Content-Security-Policy" = "default-src 'self' https://kennygoff.com https://www.kennygoff.com https://calm-thorn-side.kennygoff.com;"
+    "Content-Security-Policy" = "default-src 'self' https://kennygoff.com https://www.kennygoff.com https://calm-thorn-side.kennygoff.com https://cdn.usefathom.com;"
