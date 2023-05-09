@@ -3,7 +3,7 @@ import { load, trackPageview } from "fathom-client";
 import { useEffect, useRef } from "react";
 
 const FATHOM_ID = "HMQYESLQ";
-const FATHOM_URL = "https://calm-thorn-side.kennygoff.com/script.js";
+const FATHOM_URL = "https://cdn.usefathom.com/script.js";
 
 /**
  * Fathom component to track pageviews on load as well as navigation changes
