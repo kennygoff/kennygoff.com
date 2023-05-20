@@ -162,9 +162,9 @@ export default function Index() {
                   >
                     Digital dice vs physical dice
                   </Link>{" "}
-                  <span className="rounded ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
+                  {/* <span className="rounded ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
                     New
-                  </span>
+                  </span> */}
                 </li>
                 <li>
                   <Link
@@ -254,7 +254,7 @@ export default function Index() {
           </div>
         </section>
       </main>
-      <Newsletter />
+      {/* <Newsletter /> */}
       <Footer />
     </div>
   );

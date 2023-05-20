@@ -56,7 +56,7 @@ export default function Articles() {
           </div>
         </section>
       </main>
-      <Newsletter />
+      {/* <Newsletter /> */}
       <Footer />
     </div>
   );
