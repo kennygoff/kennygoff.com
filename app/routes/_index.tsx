@@ -27,12 +27,12 @@ export default function Index() {
           <p className="mb-3">Hey! 👋</p>
           <h1 className="mb-3">
             I'm <span className="text-white font-semibold">Kenny Goff</span>, a
-            designer and developer.
+            creative developer.
           </h1>
           <p className="mb-3">
             I enjoy building tools to save time and designing games to spend it.
             I'm a senior web engineer, a TTRPG game master, and a dive bar dart
-            player. I run an indie game and product development studio,{" "}
+            player. I run an independent software company,{" "}
             <a
               href="https://inwavelabs.com"
               className="text-white font-semibold underline"
