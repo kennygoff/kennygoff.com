@@ -126,7 +126,7 @@ export default function Index() {
                 </LinkButton>
                 <a
                   className="text-sm font-bold sm:inline-block text-slate-100 hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded block text-center"
-                  href="https://inwavelabs.com/double-turn"
+                  href="https://doubleturngame.com"
                 >
                   Learn more &rarr;
                 </a>
