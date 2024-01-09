@@ -4,10 +4,10 @@ import { config } from "@netlify/remix-adapter";
 export default {
   ...(process.env.NODE_ENV === "production" ? config : undefined),
   tailwind: true,
-  // server:
-  //   process.env.NETLIFY || process.env.NETLIFY_LOCAL
-  //     ? "./server.js"
-  //     : undefined,
+  server:
+    process.env.NETLIFY || process.env.NETLIFY_LOCAL
+      ? "./server.js"
+      : undefined,
   // appDirectory: "app",
   // assetsBuildDirectory: "public/build",
   // publicPath: "/build/",
