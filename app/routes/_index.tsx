@@ -2,17 +2,17 @@ import { Link } from "@remix-run/react";
 import type { MetaFunction } from "@remix-run/node";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 
-import { Newsletter } from "~/components/newsletter";
 import { LinkButton } from "~/components/link-button";
 import { Footer } from "~/components/footer";
 
-export const meta: MetaFunction = () => {
-  return {
-    title: "Kenny Goff | Designer, developer, and TTRPG game master",
-    description:
+export const meta: MetaFunction = () => [
+  { title: "Kenny Goff | Designer, developer, and TTRPG game master" },
+  {
+    name: "description",
+    content:
       "Kenny Goff is a designer and developer. He's a web engineer, TTRPG game master, and runs an indie game and product development studio.",
-  };
-};
+  },
+];
 
 export default function Index() {
   return (

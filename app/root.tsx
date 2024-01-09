@@ -10,11 +10,13 @@ import {
 import stylesheet from "~/tailwind.css";
 import Fathom from "~/components/fathom";
 
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  title: "Kenny Goff",
-  viewport: "width=device-width,initial-scale=1",
-});
+export const meta: MetaFunction = () => [
+  {
+    charset: "utf-8",
+  },
+  { title: "Kenny Goff" },
+  { name: "viewport", content: "width=device-width,initial-scale=1" },
+];
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },

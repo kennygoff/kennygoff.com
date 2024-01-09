@@ -1,18 +1,18 @@
-import { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
 import { LinkButton } from "~/components/link-button";
-import { Newsletter } from "~/components/newsletter";
 
-export const meta: MetaFunction = () => {
-  return {
-    title: "5e Campaign Wiki for Notion",
-    description:
+export const meta: MetaFunction = () => [
+  { title: "5e Campaign Wiki for Notion" },
+  {
+    name: "description",
+    content:
       "A Notion template to help you run your 5e campaign. Set up with ready-to-use databases for players, NPCs, session notes, encounters and more. Plan and run your games with ease all within Notion.",
-  };
-};
+  },
+];
 
 export default function Articles() {
   return (

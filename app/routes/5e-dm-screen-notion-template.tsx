@@ -1,18 +1,18 @@
-import { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
 import { LinkButton } from "~/components/link-button";
-import { Newsletter } from "~/components/newsletter";
 
-export const meta: MetaFunction = () => {
-  return {
-    title: "5e DM Screen for Notion",
-    description:
+export const meta: MetaFunction = () => [
+  { title: "5e DM Screen for Notion" },
+  {
+    name: "description",
+    content:
       "A DM Screen and 5e reference in a Notion template. Quickly look up rules, player stats, and more in this digital DM screen that is easy to extend and modify.",
-  };
-};
+  },
+];
 
 export default function Articles() {
   return (
