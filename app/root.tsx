@@ -48,7 +48,7 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
-        <Fathom />
+        {process.env.NODE_ENV === "production" && <Fathom />}
       </body>
     </html>
   );
