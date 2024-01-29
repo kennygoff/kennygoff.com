@@ -17,8 +17,10 @@
     "cross-env": "^7.0.3",
     "fathom-client": "^3.6.0",
     "isbot": "latest",
+    "mathjs": "^12.3.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.5.1",
@@ -27,6 +29,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
+    "@types/uuid": "^9.0.7",
     "eslint": "^8.56.0",
     "prettier": "3.2.4",
     "tailwindcss": "^3.4.1",
