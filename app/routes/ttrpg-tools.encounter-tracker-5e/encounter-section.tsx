@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import { Encounter } from "./encounters/encounter";
 import {
   ArrowUturnLeftIcon,
@@ -6,14 +6,12 @@ import {
   ClockIcon,
   ForwardIcon,
   HashtagIcon,
-  PlayCircleIcon,
   PlayIcon,
   StopIcon,
 } from "@heroicons/react/24/solid";
-import { DiceInput } from "./components/dice-input";
-import { twMerge } from "tailwind-merge";
 import { useActorsContext } from "./actors";
 import { initiativeSort } from "./utils";
+import { ActorRow } from "./components/actor-row";
 
 export const EncounterSection = () => {
   const [encounter, setEncounter] = useState<Encounter>({
@@ -21,7 +19,7 @@ export const EncounterSection = () => {
     currentRound: 1,
     currentTurn: 1,
   });
-  const [state, dispatch] = useActorsContext();
+  const [state] = useActorsContext();
 
   return (
     <div className="bg-slate-800 rounded m-2">
@@ -107,10 +105,10 @@ export const EncounterSection = () => {
           </>
         ) : null}
       </div>
-      <div className="grid grid-cols-[0fr_0fr_1fr_0fr_0fr]">
+      <div className="grid grid-cols-[0fr_0fr_1fr_0fr_0fr] p-2 gap-y-0.5">
         <>
-          <div className="px-2 flex items-center justify-center">
-            <PlayCircleIcon className="w-4 h-4 text-slate-300" />
+          <div className="pl-3 flex items-center justify-center">
+            <HashtagIcon className="w-4 h-4 text-slate-300" />
           </div>
           <div className="px-2 py-1 text-sm font-bold text-slate-300">
             Initiative
@@ -122,72 +120,13 @@ export const EncounterSection = () => {
           <div className="px-2 py-1 text-sm font-bold text-slate-300">HP</div>
         </>
         {[...state.actors].sort(initiativeSort).map((actor, i) => (
-          <Fragment key={actor.name}>
-            <div className="px-2 flex items-center justify-center">
-              {encounter.state === "active" &&
-              encounter.currentTurn - 1 === i ? (
-                <PlayIcon className="w-4 h-4 text-emerald-500" />
-              ) : null}
-            </div>
-            <div className="px-2 py-1">
-              <DiceInput
-                value={actor.initiative}
-                onChangeValue={(newInitiative) =>
-                  dispatch({
-                    type: "replace-by-name",
-                    name: actor.name,
-                    actor: { ...actor, initiative: newInitiative },
-                  })
-                }
-              />
-            </div>
-            <div className="px-2 py-1 flex items-center gap-2">
-              {actor.name}
-              {actor.player ? (
-                <span className="rounded-sm px-1 inline-block font-bold bg-sky-500 text-white text-xs">
-                  PC
-                </span>
-              ) : null}
-            </div>
-            <div className="px-2 py-1">
-              {actor.concentration ? (
-                <CheckIcon className="w-4 h-4 text-white" />
-              ) : null}
-            </div>
-            <div className="flex flex-col">
-              <div className="px-2 py-1 flex flex-row gap-1 items-center">
-                <DiceInput
-                  value={actor.hp ?? actor.maxHp ?? 0}
-                  onChangeValue={(newHP) =>
-                    dispatch({
-                      type: "replace-by-name",
-                      name: actor.name,
-                      actor: { ...actor, hp: newHP },
-                    })
-                  }
-                />
-                <span>/</span>
-                <span>{actor.maxHp}</span>
-              </div>
-              <div className="px-2 pb-1">
-                <div className="rounded-full bg-slate-700 w-full h-1 overflow-hidden">
-                  <div
-                    className={twMerge(
-                      `h-full`,
-                      Math.floor(actor.hp ?? actor.maxHp ?? 100) /
-                        Math.floor(actor.maxHp ?? 100) <
-                        0.5
-                        ? "bg-red-500"
-                        : "bg-emerald-500",
-                    )}
-                    style={{
-                      width: `${(Math.floor(actor.hp ?? actor.maxHp ?? 100) / Math.floor(actor.maxHp ?? 100)) * 100}%`,
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-          </Fragment>
+          <ActorRow
+            turn={i + 1}
+            actor={actor}
+            active={
+              encounter.state === "active" && encounter.currentTurn - 1 === i
+            }
+          />
         ))}
       </div>
     </div>
