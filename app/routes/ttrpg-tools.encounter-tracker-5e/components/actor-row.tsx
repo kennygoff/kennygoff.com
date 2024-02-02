@@ -55,16 +55,6 @@ export const ActorRow = ({ actor, active, turn }: Props) => {
       </div>
       <div
         className={twMerge(
-          "px-2 py-1 bg-slate-700",
-          active ? "bg-slate-600" : null,
-        )}
-      >
-        {actor.concentration ? (
-          <CheckIcon className="w-4 h-4 text-white" />
-        ) : null}
-      </div>
-      <div
-        className={twMerge(
           "flex flex-col bg-slate-700 rounded-r-sm p-1",
           active ? "bg-slate-600" : null,
         )}

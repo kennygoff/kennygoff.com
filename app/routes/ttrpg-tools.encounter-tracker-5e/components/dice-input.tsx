@@ -75,7 +75,7 @@ export const DiceInput = ({ showResult, value, onChangeValue }: Props) => {
       <input
         type="text"
         className={twMerge(
-          "px-2 py-1 rounded text-white bg-slate-900 border border-slate-600 outline-none focus:border-slate-300 w-16",
+          "px-2 py-1 rounded text-white bg-slate-900 border border-slate-600 outline-none focus:border-slate-300 w-10 text-center font-bold",
           !(isEmpty || isExactValue)
             ? valid
               ? "border-emerald-500 focus:border-emerald-500"

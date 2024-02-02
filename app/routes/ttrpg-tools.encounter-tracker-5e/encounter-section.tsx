@@ -23,10 +23,10 @@ export const EncounterSection = () => {
 
   return (
     <div className="bg-slate-800 rounded m-2">
-      <div className="p-2 flex flex-row gap-2">
+      <div className="p-2 grid grid-cols-2 sm:flex sm:flex-row gap-2">
         {encounter.state === "new" ? (
           <button
-            className="px-4 py-2 rounded-md font-bold bg-emerald-600 hover:bg-emerald-800 flex flex-row items-center gap-1"
+            className="px-4 py-2 col-span-full justify-center sm:w-auto rounded-md font-bold bg-emerald-600 hover:bg-emerald-800 flex flex-row items-center gap-1"
             onClick={() =>
               setEncounter({
                 ...encounter,
@@ -92,31 +92,29 @@ export const EncounterSection = () => {
             </button>
           </>
         ) : null}
-        {encounter.state !== "new" ? (
-          <>
-            <div className="px-4 py-2 rounded-md font-bold bg-slate-700 flex flex-row items-center gap-1">
-              <ClockIcon className="w-4 h-4 text-white" />
-              Round {encounter.currentRound}
-            </div>
-            <div className="px-4 py-2 rounded-md font-bold bg-slate-700 flex flex-row items-center gap-1">
-              <HashtagIcon className="w-4 h-4 text-white" />
-              Turn {encounter.currentTurn}
-            </div>
-          </>
-        ) : null}
       </div>
-      <div className="grid grid-cols-[0fr_0fr_1fr_0fr_0fr] p-2 gap-y-0.5">
+      {encounter.state !== "new" || true ? (
+        <div className="p-2 grid grid-cols-2 sm:flex sm:flex-row">
+          <div className="px-4 py-2 rounded-l font-bold bg-slate-600 flex flex-row items-center gap-1">
+            <ClockIcon className="w-4 h-4 text-white" />
+            Round {encounter.currentRound}
+          </div>
+          <div className="px-4 py-2 rounded-r font-bold bg-slate-700 flex flex-row items-center gap-1">
+            <HashtagIcon className="w-4 h-4 text-white" />
+            Turn {encounter.currentTurn}
+          </div>
+        </div>
+      ) : null}
+      <div className="grid grid-cols-[0fr_0fr_1fr_0fr] p-2 gap-y-0.5">
         <>
           <div className="pl-3 flex items-center justify-center">
             <HashtagIcon className="w-4 h-4 text-slate-300" />
           </div>
-          <div className="px-2 py-1 text-sm font-bold text-slate-300">
-            Initiative
+          <div className="px-2 py-1 text-sm font-bold text-slate-300 text-center">
+            <span className="hidden sm:inline">Initiative</span>
+            <span className="sm:hidden">Init.</span>
           </div>
           <div className="px-2 py-1 text-sm font-bold text-slate-300">Name</div>
-          <div className="px-2 py-1 text-sm font-bold text-slate-300">
-            Concentration
-          </div>
           <div className="px-2 py-1 text-sm font-bold text-slate-300">HP</div>
         </>
         {[...state.actors].sort(initiativeSort).map((actor, i) => (
