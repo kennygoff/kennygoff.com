@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Encounter } from "./encounters/encounter";
 import {
   ArrowUturnLeftIcon,
@@ -93,7 +93,7 @@ export const EncounterSection = () => {
           </>
         ) : null}
       </div>
-      {encounter.state !== "new" || true ? (
+      {encounter.state !== "new" ? (
         <div className="p-2 grid grid-cols-2 sm:flex sm:flex-row">
           <div className="px-4 py-2 rounded-l font-bold bg-slate-600 flex flex-row items-center gap-1">
             <ClockIcon className="w-4 h-4 text-white" />
@@ -105,23 +105,29 @@ export const EncounterSection = () => {
           </div>
         </div>
       ) : null}
-      <div className="grid grid-cols-[0fr_0fr_1fr_0fr] p-2 gap-y-0.5">
+      <div className="grid grid-cols-1 sm:grid-cols-[0fr_0fr_1fr_0fr] p-2 gap-0 sm:gap-y-0.5">
         <>
-          <div className="pl-3 flex items-center justify-center">
+          <div className="hidden sm:flex pl-3 items-center justify-center">
             <HashtagIcon className="w-4 h-4 text-slate-300" />
           </div>
-          <div className="px-2 py-1 text-sm font-bold text-slate-300 text-center">
-            <span className="hidden sm:inline">Initiative</span>
+          <div className="hidden sm:block px-2 py-1 text-sm font-bold text-slate-300 text-center">
+            <span className="hidden sm:inline">Init.</span>
             <span className="sm:hidden">Init.</span>
           </div>
-          <div className="px-2 py-1 text-sm font-bold text-slate-300">Name</div>
-          <div className="px-2 py-1 text-sm font-bold text-slate-300">HP</div>
+          <div className="hidden sm:block px-2 py-1 text-sm font-bold text-slate-300">
+            Name
+          </div>
+          <div className="hidden sm:block px-2 py-1 text-sm font-bold text-slate-300">
+            HP
+          </div>
         </>
         {[...state.actors].sort(initiativeSort).map((actor, i) => (
           <ActorRow
+            key={actor.name}
             turn={i + 1}
             actor={actor}
-            active={
+            active={encounter.state === "active"}
+            currentTurn={
               encounter.state === "active" && encounter.currentTurn - 1 === i
             }
           />
