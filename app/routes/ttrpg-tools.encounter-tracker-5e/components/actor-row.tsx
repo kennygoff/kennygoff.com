@@ -110,7 +110,6 @@ export const ActorRow = ({ actor, active, currentTurn, turn }: Props) => {
             />
           </div>
         </div>
-        <div>{hpPercentage(actor.hp, actor.maxHp) * 100}%</div>
       </div>
     </Fragment>
   );
