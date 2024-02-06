@@ -4,6 +4,7 @@ import { DiceInput } from "./dice-input";
 import { Actor } from "../encounters/actor";
 import { useActorsContext } from "../actors";
 import { twMerge } from "tailwind-merge";
+import { clamp, hpPercentage } from "../utils";
 
 type Props = {
   actor: Actor;
@@ -80,13 +81,15 @@ export const ActorRow = ({ actor, active, currentTurn, turn }: Props) => {
           <div className="flex flex-row gap-1 items-center">
             <DiceInput
               value={actor.hp ?? actor.maxHp ?? 0}
-              onChangeValue={(newHP) =>
+              range={[0, actor.maxHp]}
+              onChangeValue={(newHP) => {
+                console.log("newHP", newHP);
                 dispatch({
                   type: "replace-by-name",
                   name: actor.name,
                   actor: { ...actor, hp: newHP },
-                })
-              }
+                });
+              }}
             />
             <span>/</span>
             <span>{actor.maxHp}</span>
@@ -97,18 +100,17 @@ export const ActorRow = ({ actor, active, currentTurn, turn }: Props) => {
             <div
               className={twMerge(
                 `h-full`,
-                Math.floor(actor.hp ?? actor.maxHp ?? 100) /
-                  Math.floor(actor.maxHp ?? 100) <
-                  0.5
+                hpPercentage(actor.hp, actor.maxHp) < 0.5
                   ? "bg-red-500"
                   : "bg-emerald-500",
               )}
               style={{
-                width: `${(Math.floor(actor.hp ?? actor.maxHp ?? 100) / Math.floor(actor.maxHp ?? 100)) * 100}%`,
+                width: `${clamp(hpPercentage(actor.hp, actor.maxHp) * 100, 0, 100)}%`,
               }}
             />
           </div>
         </div>
+        <div>{hpPercentage(actor.hp, actor.maxHp) * 100}%</div>
       </div>
     </Fragment>
   );

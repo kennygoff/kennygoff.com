@@ -6,6 +6,7 @@ import {
 } from "react";
 import { evaluate } from "mathjs";
 import { twMerge } from "tailwind-merge";
+import { clamp } from "../utils";
 
 // https://stackoverflow.com/questions/2630418/javascript-regex-returning-true-then-false-then-true-etc
 const inputNumbersOnlyRegex = /^\d+$/;
@@ -14,7 +15,7 @@ const inputInverseRegex = /[^dadvdis\d\:\(|\)|\/|\*|\+|\-\ ]/g;
 const inputRegex = /^(?:(\dd\d+(?::(?:adv|dis))?)|\d|[\(|\)|\/|\*|\+|\-\ ])+$/;
 const diceNotationRegex = /(?:(\dd\d+(?::(?:adv|dis))?))/;
 
-const safeEval = (expr: string) => {
+const safeEval = (expr: string): number | null => {
   try {
     return evaluate(expr);
   } catch {
@@ -25,12 +26,19 @@ const safeEval = (expr: string) => {
 type Props = InputHTMLAttributes<HTMLInputElement> & {
   showResult?: boolean;
   value?: number;
+  range?: [number | undefined, number | undefined];
   onChangeValue?: (value: number) => void;
 };
 
-export const DiceInput = ({ showResult, value, onChangeValue }: Props) => {
+export const DiceInput = ({
+  showResult,
+  value,
+  range,
+  onChangeValue,
+}: Props) => {
   const [text, setText] = useState(`${value ?? ""}`);
   const [valid, setValid] = useState(true);
+  const [lowerBound, upperBound] = range ?? [undefined, undefined];
 
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     let rawText = e.target.value;
@@ -50,25 +58,32 @@ export const DiceInput = ({ showResult, value, onChangeValue }: Props) => {
 
   const onKeyUp = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      const newValue = safeEval(text) ? Math.floor(safeEval(text)) : null;
+      const evaled = safeEval(text);
+      const newValue = evaled !== null ? Math.floor(evaled) : null;
       if (newValue !== null) {
-        onChangeValue?.(newValue);
-        setText(`${newValue}`);
+        const clamped = clamp(newValue, lowerBound, upperBound);
+        onChangeValue?.(clamped);
+        setText(`${clamped}`);
       }
     }
   };
 
   const onBlur = () => {
-    const newValue = safeEval(text) ? Math.floor(safeEval(text)) : null;
+    const evaled = safeEval(text);
+    const newValue = evaled !== null ? Math.floor(evaled) : null;
     if (newValue !== null) {
-      onChangeValue?.(newValue);
-      setText(`${newValue}`);
+      const clamped = clamp(newValue, lowerBound, upperBound);
+      onChangeValue?.(clamped);
+      setText(`${clamped}`);
     }
   };
 
   const isNumber = inputNumbersOnlyRegex.test(text);
   const isEmpty = text.length === 0;
   const isExactValue = text === `${value}`;
+  const shouldShowResult =
+    showResult && !isNumber && !(isEmpty || isExactValue) && valid;
+  const result = shouldShowResult ? safeEval(text) : "";
 
   return (
     <div className="relative">
@@ -89,7 +104,7 @@ export const DiceInput = ({ showResult, value, onChangeValue }: Props) => {
       />
       {showResult && !isNumber && !(isEmpty || isExactValue) && valid ? (
         <div className="absolute right-0 top-0 bottom-0 flex flex-row items-center pr-2 text-slate-400 font-bold">
-          = {safeEval(text) ? Math.floor(safeEval(text)) : null}
+          = {result}
         </div>
       ) : null}
     </div>
