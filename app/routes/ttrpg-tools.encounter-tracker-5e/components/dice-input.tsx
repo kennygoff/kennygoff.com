@@ -25,7 +25,7 @@ type Props = InputHTMLAttributes<HTMLInputElement> & {
   showResult?: boolean;
   value?: number;
   range?: [number | undefined, number | undefined];
-  onChangeValue?: (value: number) => void;
+  onChangeValue?: (value: number | undefined) => void;
 };
 
 export const DiceInput = ({
@@ -56,8 +56,15 @@ export const DiceInput = ({
 
   const onKeyUp = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
+      if (text === "") {
+        onChangeValue?.(undefined);
+        setText(text);
+        return;
+      }
+
       const evaled = safeEval(text);
       const newValue = evaled !== null ? Math.floor(evaled) : null;
+      console.log({ text, evaled, newValue });
       if (newValue !== null) {
         const clamped = clamp(newValue, lowerBound, upperBound);
         onChangeValue?.(clamped);
@@ -67,6 +74,12 @@ export const DiceInput = ({
   };
 
   const onBlur = () => {
+    if (text === "") {
+      onChangeValue?.(undefined);
+      setText(text);
+      return;
+    }
+
     const evaled = safeEval(text);
     const newValue = evaled !== null ? Math.floor(evaled) : null;
     if (newValue !== null) {

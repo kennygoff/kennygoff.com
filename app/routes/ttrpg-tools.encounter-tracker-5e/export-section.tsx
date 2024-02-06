@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { useActorsContext } from "./actors";
+import { useEncounterContext } from "./encounter-context";
 import { exportData } from "./utils";
 import { createExport } from "./encounters/sqc-export";
 
 export const ExportSection = () => {
   const [showData, setShowData] = useState(false);
-  const [state] = useActorsContext();
+  const [state] = useEncounterContext();
 
   return (
     <div className="p-2 m-2 rounded-md bg-slate-800">

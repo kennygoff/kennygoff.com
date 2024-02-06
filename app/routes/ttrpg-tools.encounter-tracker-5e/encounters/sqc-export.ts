@@ -13,7 +13,7 @@ export const createExport = (actors: Actor[]) => {
     type: "SQC",
     version: "0.0-dev",
     encounter: {
-      actors,
+      actors: actors.map(({ shortid, ...actor }) => actor),
     },
   };
 };

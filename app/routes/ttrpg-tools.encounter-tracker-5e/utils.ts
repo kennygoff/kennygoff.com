@@ -1,5 +1,6 @@
 import type { Actor } from "./encounters/actor";
 import { createExport } from "./encounters/sqc-export";
+import { customAlphabet } from "nanoid/non-secure";
 
 export const exportData = (data: any) => {
   const exportObj = createExport(data);
@@ -38,3 +39,7 @@ export const clamp = function (value: number, min?: number, max?: number) {
 
   return val2;
 };
+
+const alphabet =
+  "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+export const generateShortId = customAlphabet(alphabet, 8);

@@ -2,7 +2,7 @@ import { PlayIcon } from "@heroicons/react/24/solid";
 import { Fragment } from "react";
 import { DiceInput } from "./dice-input";
 import type { Actor } from "../encounters/actor";
-import { useActorsContext } from "../actors";
+import { useEncounterContext } from "../encounter-context";
 import { twMerge } from "tailwind-merge";
 import { clamp, hpPercentage } from "../utils";
 
@@ -14,10 +14,10 @@ type Props = {
 };
 
 export const ActorRow = ({ actor, active, currentTurn, turn }: Props) => {
-  const [, dispatch] = useActorsContext();
+  const [, dispatch] = useEncounterContext();
 
   return (
-    <Fragment key={actor.name}>
+    <Fragment>
       <div
         className={twMerge(
           "px-2 sm:pl-3 sm:pr-0 py-1 flex items-center bg-slate-700 rounded-l-sm",
@@ -52,9 +52,9 @@ export const ActorRow = ({ actor, active, currentTurn, turn }: Props) => {
             value={actor.initiative}
             onChangeValue={(newInitiative) =>
               dispatch({
-                type: "replace-by-name",
-                name: actor.name,
-                actor: { ...actor, initiative: newInitiative },
+                type: "update-actor",
+                shortid: actor.shortid,
+                actor: { initiative: newInitiative },
               })
             }
           />
@@ -85,9 +85,9 @@ export const ActorRow = ({ actor, active, currentTurn, turn }: Props) => {
               onChangeValue={(newHP) => {
                 console.log("newHP", newHP);
                 dispatch({
-                  type: "replace-by-name",
-                  name: actor.name,
-                  actor: { ...actor, hp: newHP },
+                  type: "update-actor",
+                  shortid: actor.shortid,
+                  actor: { hp: newHP },
                 });
               }}
             />

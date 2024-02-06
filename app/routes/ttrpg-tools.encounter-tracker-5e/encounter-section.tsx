@@ -1,5 +1,3 @@
-import { useState } from "react";
-import type { Encounter } from "./encounters/encounter";
 import {
   ArrowUturnLeftIcon,
   CheckIcon,
@@ -9,17 +7,11 @@ import {
   PlayIcon,
   StopIcon,
 } from "@heroicons/react/24/solid";
-import { useActorsContext } from "./actors";
-import { initiativeSort } from "./utils";
+import { useEncounterContext } from "./encounter-context";
 import { ActorRow } from "./components/actor-row";
 
 export const EncounterSection = () => {
-  const [encounter, setEncounter] = useState<Encounter>({
-    state: "new",
-    currentRound: 1,
-    currentTurn: 1,
-  });
-  const [state] = useActorsContext();
+  const [{ encounter, actors }, dispatch] = useEncounterContext();
 
   return (
     <div className="bg-slate-800 rounded m-2">
@@ -28,11 +20,13 @@ export const EncounterSection = () => {
           <button
             className="px-4 py-2 col-span-full justify-center sm:w-auto rounded-md font-bold bg-emerald-600 hover:bg-emerald-800 flex flex-row items-center gap-1"
             onClick={() =>
-              setEncounter({
-                ...encounter,
-                state: "active",
-                currentRound: 1,
-                currentTurn: 1,
+              dispatch({
+                type: "update-encounter",
+                encounter: {
+                  state: "active",
+                  currentRound: 1,
+                  currentTurn: 1,
+                },
               })
             }
           >
@@ -45,16 +39,18 @@ export const EncounterSection = () => {
             <button
               className="px-4 py-2 rounded-md font-bold bg-slate-600 hover:bg-slate-900 flex flex-row items-center gap-1"
               onClick={() =>
-                setEncounter({
-                  ...encounter,
-                  currentRound:
-                    encounter.currentTurn === state.actors.length
-                      ? encounter.currentRound + 1
-                      : encounter.currentRound,
-                  currentTurn:
-                    encounter.currentTurn === state.actors.length
-                      ? 1
-                      : encounter.currentTurn + 1,
+                dispatch({
+                  type: "update-encounter",
+                  encounter: {
+                    currentRound:
+                      encounter.currentTurn === actors.length
+                        ? encounter.currentRound + 1
+                        : encounter.currentRound,
+                    currentTurn:
+                      encounter.currentTurn === actors.length
+                        ? 1
+                        : encounter.currentTurn + 1,
+                  },
                 })
               }
             >
@@ -63,7 +59,12 @@ export const EncounterSection = () => {
             </button>
             <button
               className="px-4 py-2 rounded-md font-bold bg-rose-600 hover:bg-rose-800 flex flex-row items-center gap-1"
-              onClick={() => setEncounter({ ...encounter, state: "finished" })}
+              onClick={() =>
+                dispatch({
+                  type: "update-encounter",
+                  encounter: { state: "finished" },
+                })
+              }
             >
               <StopIcon className="w-4 h-4 text-white" />
               Finish
@@ -79,11 +80,13 @@ export const EncounterSection = () => {
             <button
               className="px-4 py-2 rounded-md font-bold bg-slate-600 hover:bg-slate-900 flex flex-row items-center gap-1"
               onClick={() =>
-                setEncounter({
-                  ...encounter,
-                  state: "new",
-                  currentRound: 1,
-                  currentTurn: 1,
+                dispatch({
+                  type: "update-encounter",
+                  encounter: {
+                    state: "new",
+                    currentRound: 1,
+                    currentTurn: 1,
+                  },
                 })
               }
             >
@@ -121,9 +124,9 @@ export const EncounterSection = () => {
             HP
           </div>
         </>
-        {[...state.actors].sort(initiativeSort).map((actor, i) => (
+        {actors.map((actor, i) => (
           <ActorRow
-            key={actor.name}
+            key={actor.shortid}
             turn={i + 1}
             actor={actor}
             active={encounter.state === "active"}

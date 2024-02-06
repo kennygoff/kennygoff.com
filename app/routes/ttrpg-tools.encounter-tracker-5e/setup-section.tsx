@@ -1,21 +1,22 @@
 import type { ChangeEvent, FormEvent } from "react";
 import { useRef, useState } from "react";
-import { useActorsContext } from "./actors";
+import { useEncounterContext } from "./encounter-context";
 import type { Actor } from "./encounters/actor";
 import { newActor } from "./encounters/actor";
 import { processImport } from "./encounters/sqc-export";
+import { generateShortId } from "./utils";
 
 export const SetupSection = () => {
   const [showCreate, setShowCreate] = useState<"import" | "add" | null>(null);
   const [actorForm, setActorForm] = useState<Actor>(newActor());
-  const [, dispatch] = useActorsContext();
+  const [, dispatch] = useEncounterContext();
 
   const jsonImportRef = useRef(null);
 
   const handleAddActor = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    dispatch({ type: "add", actor: actorForm });
+    dispatch({ type: "add-actor", actor: actorForm });
     setActorForm(newActor());
   };
 
@@ -34,12 +35,14 @@ export const SetupSection = () => {
         if (typeof str !== "string") return;
         const json = JSON.parse(str);
         const importedData = processImport(json);
-        console.log(importedData);
         if (importedData !== null) {
           if (importedData.encounter) {
+            const actorsWithIds = importedData.encounter?.actors.map(
+              (actor) => ({ ...actor, shortid: generateShortId() }),
+            );
             dispatch({
               type: "import",
-              actors: importedData.encounter?.actors,
+              actors: actorsWithIds,
             });
             setShowCreate(null);
             e.target.value = "";

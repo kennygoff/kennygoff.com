@@ -1,3 +1,5 @@
+import { generateShortId } from "../utils";
+
 export enum Condition {
   Blinded = "Blinded",
   Charmed = "Charmed",
@@ -35,6 +37,7 @@ export type Concentration = {
 );
 
 export type Actor = {
+  shortid?: string;
   name: string;
   hp?: number;
   maxHp?: number;
@@ -46,6 +49,7 @@ export type Actor = {
 };
 
 export const newActor = (): Actor => ({
+  shortid: generateShortId(),
   name: "",
   conditions: [],
   player: false,
