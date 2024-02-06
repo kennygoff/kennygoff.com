@@ -1,10 +1,6 @@
-import {
-  PropsWithChildren,
-  createContext,
-  useContext,
-  useReducer,
-} from "react";
-import { Actor } from "./encounters/actor";
+import type { PropsWithChildren } from "react";
+import { createContext, useContext, useReducer } from "react";
+import type { Actor } from "./encounters/actor";
 
 // https://www.aleksandrhovhannisyan.com/blog/managing-complex-state-react-usereducer/
 // https://designcode.io/react-hooks-handbook-usereducer-with-usecontext-1

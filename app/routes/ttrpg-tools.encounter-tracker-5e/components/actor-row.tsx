@@ -1,7 +1,7 @@
-import { CheckIcon, PlayIcon } from "@heroicons/react/24/solid";
+import { PlayIcon } from "@heroicons/react/24/solid";
 import { Fragment } from "react";
 import { DiceInput } from "./dice-input";
-import { Actor } from "../encounters/actor";
+import type { Actor } from "../encounters/actor";
 import { useActorsContext } from "../actors";
 import { twMerge } from "tailwind-merge";
 import { clamp, hpPercentage } from "../utils";

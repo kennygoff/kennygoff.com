@@ -1,5 +1,5 @@
-import { Fragment, useState } from "react";
-import { Encounter } from "./encounters/encounter";
+import { useState } from "react";
+import type { Encounter } from "./encounters/encounter";
 import {
   ArrowUturnLeftIcon,
   CheckIcon,

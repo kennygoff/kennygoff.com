@@ -1,12 +1,14 @@
-import { ChangeEvent, FormEvent, useRef, useState } from "react";
+import type { ChangeEvent, FormEvent } from "react";
+import { useRef, useState } from "react";
 import { useActorsContext } from "./actors";
-import { Actor, newActor } from "./encounters/actor";
+import type { Actor } from "./encounters/actor";
+import { newActor } from "./encounters/actor";
 import { processImport } from "./encounters/sqc-export";
 
 export const SetupSection = () => {
   const [showCreate, setShowCreate] = useState<"import" | "add" | null>(null);
   const [actorForm, setActorForm] = useState<Actor>(newActor());
-  const [state, dispatch] = useActorsContext();
+  const [, dispatch] = useActorsContext();
 
   const jsonImportRef = useRef(null);
 

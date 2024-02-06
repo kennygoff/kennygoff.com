@@ -1,19 +1,17 @@
-import {
-  ChangeEvent,
-  InputHTMLAttributes,
-  KeyboardEvent,
-  useState,
-} from "react";
+import { useState } from "react";
+import type { ChangeEvent, InputHTMLAttributes, KeyboardEvent } from "react";
 import { evaluate } from "mathjs";
 import { twMerge } from "tailwind-merge";
 import { clamp } from "../utils";
 
+/* eslint-disable no-useless-escape */
 // https://stackoverflow.com/questions/2630418/javascript-regex-returning-true-then-false-then-true-etc
 const inputNumbersOnlyRegex = /^\d+$/;
 const inputFilterRegex = /^[dadvdis\d\:\(|\)|\/|\*|\+|\-\ ]+$/;
 const inputInverseRegex = /[^dadvdis\d\:\(|\)|\/|\*|\+|\-\ ]/g;
 const inputRegex = /^(?:(\dd\d+(?::(?:adv|dis))?)|\d|[\(|\)|\/|\*|\+|\-\ ])+$/;
-const diceNotationRegex = /(?:(\dd\d+(?::(?:adv|dis))?))/;
+// const diceNotationRegex = /(?:(\dd\d+(?::(?:adv|dis))?))/;
+/* eslint-enable no-useless-escape */
 
 const safeEval = (expr: string): number | null => {
   try {

@@ -1,4 +1,4 @@
-import { Actor } from "./encounters/actor";
+import type { Actor } from "./encounters/actor";
 import { createExport } from "./encounters/sqc-export";
 
 export const exportData = (data: any) => {
