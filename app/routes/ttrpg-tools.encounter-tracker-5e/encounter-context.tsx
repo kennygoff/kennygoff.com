@@ -2,6 +2,7 @@ import type { PropsWithChildren } from "react";
 import { createContext, useContext, useReducer } from "react";
 import type { Actor } from "./encounters/actor";
 import type { Encounter } from "./encounters/encounter";
+import { initiativeSort } from "./utils";
 
 // https://www.aleksandrhovhannisyan.com/blog/managing-complex-state-react-usereducer/
 // https://designcode.io/react-hooks-handbook-usereducer-with-usecontext-1
@@ -17,7 +18,8 @@ type Action =
   | { type: "import"; actors: Actor[] }
   | { type: "add-actor"; actor: Actor }
   | { type: "update-actor"; shortid: Actor["shortid"]; actor: Partial<Actor> }
-  | { type: "update-encounter"; encounter: Partial<Encounter> };
+  | { type: "update-encounter"; encounter: Partial<Encounter> }
+  | { type: "start-encounter" };
 
 export const initialState: State = {
   actors: [],
@@ -37,7 +39,7 @@ const EncounterContext = createContext<[State, React.Dispatch<Action>]>([
   () => {},
 ]);
 
-export const encounterReducer = (state: State, action: Action) => {
+export const encounterReducer = (state: State, action: Action): State => {
   switch (action.type) {
     case "import": {
       return { ...state, actors: action.actors };
@@ -51,6 +53,20 @@ export const encounterReducer = (state: State, action: Action) => {
         actors: state.actors.map((a) =>
           a.shortid === action.shortid ? { ...a, ...action.actor } : a,
         ),
+      };
+    }
+    case "start-encounter": {
+      return {
+        ...state,
+        actors: state.encounter.options.autoSort
+          ? [...state.actors].sort(initiativeSort)
+          : state.actors,
+        encounter: {
+          ...state.encounter,
+          state: "active",
+          currentRound: 1,
+          currentTurn: 1,
+        },
       };
     }
     case "update-encounter": {

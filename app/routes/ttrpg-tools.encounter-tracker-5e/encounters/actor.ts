@@ -54,3 +54,9 @@ export const newActor = (): Actor => ({
   conditions: [],
   player: false,
 });
+
+export const newActorForm = (): Actor => ({
+  name: "",
+  conditions: [],
+  player: false,
+});

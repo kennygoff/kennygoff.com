@@ -21,12 +21,7 @@ export const EncounterSection = () => {
             className="px-4 py-2 col-span-full justify-center sm:w-auto rounded-md font-bold bg-emerald-600 hover:bg-emerald-800 flex flex-row items-center gap-1"
             onClick={() =>
               dispatch({
-                type: "update-encounter",
-                encounter: {
-                  state: "active",
-                  currentRound: 1,
-                  currentTurn: 1,
-                },
+                type: "start-encounter",
               })
             }
           >

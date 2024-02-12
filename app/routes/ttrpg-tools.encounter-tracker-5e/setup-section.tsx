@@ -2,13 +2,13 @@ import type { ChangeEvent, FormEvent } from "react";
 import { useRef, useState } from "react";
 import { useEncounterContext } from "./encounter-context";
 import type { Actor } from "./encounters/actor";
-import { newActor } from "./encounters/actor";
+import { newActorForm } from "./encounters/actor";
 import { processImport } from "./encounters/sqc-export";
 import { generateShortId } from "./utils";
 
 export const SetupSection = () => {
   const [showCreate, setShowCreate] = useState<"import" | "add" | null>(null);
-  const [actorForm, setActorForm] = useState<Actor>(newActor());
+  const [actorForm, setActorForm] = useState<Actor>(newActorForm());
   const [numberOfCopies, setNumberOfCopies] = useState(1);
   const [, dispatch] = useEncounterContext();
 
@@ -18,16 +18,23 @@ export const SetupSection = () => {
     e.preventDefault();
 
     if (numberOfCopies <= 1) {
-      dispatch({ type: "add-actor", actor: actorForm });
+      dispatch({
+        type: "add-actor",
+        actor: { ...actorForm, shortid: generateShortId() },
+      });
     } else {
       for (let i = 1; i <= numberOfCopies; i++) {
         dispatch({
           type: "add-actor",
-          actor: { ...actorForm, name: `${actorForm.name} (${i})` },
+          actor: {
+            ...actorForm,
+            shortid: generateShortId(),
+            name: `${actorForm.name} (${i})`,
+          },
         });
       }
     }
-    setActorForm(newActor());
+    setActorForm(newActorForm());
     setNumberOfCopies(1);
   };
 
