@@ -9,6 +9,7 @@ import { generateShortId } from "./utils";
 export const SetupSection = () => {
   const [showCreate, setShowCreate] = useState<"import" | "add" | null>(null);
   const [actorForm, setActorForm] = useState<Actor>(newActor());
+  const [numberOfCopies, setNumberOfCopies] = useState(1);
   const [, dispatch] = useEncounterContext();
 
   const jsonImportRef = useRef(null);
@@ -16,8 +17,18 @@ export const SetupSection = () => {
   const handleAddActor = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    dispatch({ type: "add-actor", actor: actorForm });
+    if (numberOfCopies <= 1) {
+      dispatch({ type: "add-actor", actor: actorForm });
+    } else {
+      for (let i = 1; i <= numberOfCopies; i++) {
+        dispatch({
+          type: "add-actor",
+          actor: { ...actorForm, name: `${actorForm.name} (${i})` },
+        });
+      }
+    }
     setActorForm(newActor());
+    setNumberOfCopies(1);
   };
 
   const handleImportActors = (e: ChangeEvent<HTMLInputElement>) => {
@@ -229,6 +240,25 @@ export const SetupSection = () => {
               <label className="text-sm font-semibold" htmlFor="player">
                 Player
               </label>
+            </div>
+            <div className="flex flex-col">
+              <label className="text-sm font-semibold" htmlFor="numberOfCopies">
+                Number of copies
+              </label>
+              <input
+                type="number"
+                value={numberOfCopies}
+                className="px-2 py-1 rounded text-white bg-slate-900 border border-slate-600 outline-none focus:border-slate-300"
+                id="numberOfCopies"
+                name="numberOfCopies"
+                data-form-type="other"
+                autoComplete="off"
+                min={1}
+                step={1}
+                onChange={(e) => {
+                  setNumberOfCopies(parseInt(e.target.value, 10));
+                }}
+              />
             </div>
           </div>
           <div className="mt-2">
