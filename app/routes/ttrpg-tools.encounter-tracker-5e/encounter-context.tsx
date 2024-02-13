@@ -19,6 +19,7 @@ type Action =
   | { type: "add-actor"; actor: Actor }
   | { type: "update-actor"; shortid: Actor["shortid"]; actor: Partial<Actor> }
   | { type: "update-encounter"; encounter: Partial<Encounter> }
+  | { type: "update-encounter-options"; options: Partial<Encounter["options"]> }
   | {
       type: "bump-actor";
       shortid: NotUndefined<Actor["shortid"]>;
@@ -99,6 +100,18 @@ export const encounterReducer = (state: State, action: Action): State => {
         encounter: {
           ...state.encounter,
           ...action.encounter,
+        },
+      };
+    }
+    case "update-encounter-options": {
+      return {
+        ...state,
+        encounter: {
+          ...state.encounter,
+          options: {
+            ...state.encounter.options,
+            ...action.options,
+          },
         },
       };
     }

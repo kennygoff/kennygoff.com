@@ -91,6 +91,30 @@ export const EncounterSection = () => {
           </>
         ) : null}
       </div>
+      <div className="p-2 gap-2 flex flex-row">
+        <div className="flex flex-row gap-1.5 items-center">
+          <input
+            type="checkbox"
+            checked={encounter.options.autoSort}
+            className="px-2 py-1 rounded text-white bg-slate-900 border border-slate-600 outline-none focus:border-slate-300"
+            data-form-type="other"
+            autoComplete="off"
+            id="autoSort"
+            name="autoSort"
+            onChange={() => {
+              dispatch({
+                type: "update-encounter-options",
+                options: {
+                  autoSort: !encounter.options.autoSort,
+                },
+              });
+            }}
+          />
+          <label className="text-sm font-semibold" htmlFor="autoSort">
+            Auto-sort by Initiative
+          </label>
+        </div>
+      </div>
       {encounter.state !== "new" ? (
         <div className="p-2 grid grid-cols-2 sm:flex sm:flex-row">
           <div className="px-4 py-2 rounded-l font-bold bg-slate-600 flex flex-row items-center gap-1">
