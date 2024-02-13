@@ -1,6 +1,5 @@
 import { Link, Outlet } from "@remix-run/react";
 import { Footer } from "~/components/footer";
-import { NewsletterBox } from "~/components/newsletter-box";
 
 export default function Articles() {
   return (

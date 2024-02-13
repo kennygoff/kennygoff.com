@@ -1,0 +1,27 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const testPatterns = `
+0
+20
+20-10
+20+10
+20/2
+20*2
+(20-10)+2
+1d2
+1d4
+1d6
+1d8
+1d12
+1d20
+1d100
+1d20:adv
+1d20:dis
+1d20:adv
+(1d20:adv+2)
+(4d8+2)/2
+4d8+2d6+2
+invalid
+1-d20
+d20
+x1d20
+`;

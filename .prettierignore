@@ -1,5 +1,10 @@
+.env
+package-lock.json
+
 # Ignore artifacts:
 build
 coverage
 public
 .netlify
+
+/app/styles/tailwind.css
