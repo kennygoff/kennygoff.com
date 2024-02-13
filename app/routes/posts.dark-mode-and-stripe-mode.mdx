@@ -6,21 +6,26 @@ oneliner:
   'Theming my website for 2019 and beyond with the popular "dark mode" and
   "stripe mode" switch'
 meta:
-  title: Dark mode and Stripe mode
-  description:
-    A tongue-in-cheek rebranding of my website to have a dark mode and a mode
-    copying financial payment provider Stripe's homepage design
+  - title: Dark mode and Stripe mode
+  - name: description
+    content: >
+      A tongue-in-cheek rebranding of my website to have a dark mode and a mode
+      copying financial payment provider Stripe's homepage design
 ---
 
-import { PostCallout } from "~/components/post-callout";
-import { PostDate } from "~/components/post-date";
+export const meta = frontmatter.meta;
+export const headers = frontmatter.headers;
 
-# {attributes.title}
+import { PostCallout } from "../components/post-callout";
+import { PostDate } from "../components/post-date";
+import { formatDate } from "../utils/format-date";
 
-<PostDate date={attributes.published} />
+# {frontmatter.title}
+
+<PostDate date={frontmatter.published} />
 
 <PostCallout
-  title={`Update ${attributes.updated.toLocaleDateString()}`}
+  title={`Update ${formatDate(frontmatter.updated)}`}
   content="I've redesigned my site a few times since this post and no longer have the Stripe mode. Bummer! I've also since moved on to Remix and Tailwind for building this site."
 />
 

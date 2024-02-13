@@ -3,15 +3,19 @@ title: "Digital dice vs physical dice"
 published: 2023-04-26
 updated: 2023-04-26
 meta:
-  title: Digital dice vs physical dice
-  description:
-    My hot take on what dice rolling method is better physical or digital and
-    spoiler - its physical dice, no contest.
+  - title: "Digital dice vs physical dice"
+  - name: description
+    content: >
+      My hot take on what dice rolling method is better physical or digital and
+      spoiler - its physical dice, no contest
 ---
 
-import { LinkButton } from "~/components/link-button";
+export const meta = frontmatter.meta;
+export const headers = frontmatter.headers;
 
-# {attributes.title}
+import { LinkButton } from "../components/link-button";
+
+# {frontmatter.title}
 
 All the TTRPG games I'm currently playing in are run online. I make extensive
 use of digital tools like Owlbear Rodeo and Notion to run my games. And yet, I

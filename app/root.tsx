@@ -1,13 +1,12 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import stylesheet from "~/tailwind.css";
+import stylesheet from "~/tailwind.css?url";
 import Fathom from "~/components/fathom";
 
 export const meta: MetaFunction = () => [{ title: "Kenny Goff" }];
@@ -47,8 +46,7 @@ export default function App() {
         <Outlet />
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
-        <Fathom />
+        <Fathom fathomId="HMQYESLQ" domain="kennygoff.com" includeWildcard />
       </body>
     </html>
   );
