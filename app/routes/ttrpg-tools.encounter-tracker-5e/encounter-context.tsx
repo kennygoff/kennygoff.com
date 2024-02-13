@@ -2,7 +2,8 @@ import type { PropsWithChildren } from "react";
 import { createContext, useContext, useReducer } from "react";
 import type { Actor } from "./encounters/actor";
 import type { Encounter } from "./encounters/encounter";
-import { NotUndefined, initiativeSort } from "./utils";
+import type { NotUndefined } from "./utils";
+import { initiativeSort } from "./utils";
 
 // https://www.aleksandrhovhannisyan.com/blog/managing-complex-state-react-usereducer/
 // https://designcode.io/react-hooks-handbook-usereducer-with-usecontext-1
