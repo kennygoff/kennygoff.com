@@ -1,4 +1,8 @@
-import { PlayIcon } from "@heroicons/react/24/solid";
+import {
+  ChevronDownIcon,
+  ChevronUpIcon,
+  PlayIcon,
+} from "@heroicons/react/24/solid";
 import { Fragment } from "react";
 import { DiceInput } from "./dice-input";
 import type { Actor } from "../encounters/actor";
@@ -29,8 +33,38 @@ export const ActorRow = ({ actor, active, currentTurn, turn }: Props) => {
         {currentTurn ? (
           <PlayIcon className="w-4 h-4 text-emerald-500" />
         ) : (
-          <div className="text-sm leading-4 font-bold text-slate-300">
-            {turn}
+          <div className="flex flex-row-reverse gap-1 sm:gap-0 sm:flex-col items-center">
+            <button
+              onClick={() => {
+                if (actor.shortid === undefined) {
+                  return;
+                }
+                dispatch({
+                  type: "bump-actor",
+                  shortid: actor.shortid,
+                  direction: -1,
+                });
+              }}
+            >
+              <ChevronUpIcon className="w-4 h-4 text-white" />
+            </button>
+            <div className="text-sm leading-4 font-bold text-slate-300">
+              {turn}
+            </div>
+            <button
+              onClick={() => {
+                if (actor.shortid === undefined) {
+                  return;
+                }
+                dispatch({
+                  type: "bump-actor",
+                  shortid: actor.shortid,
+                  direction: 1,
+                });
+              }}
+            >
+              <ChevronDownIcon className="w-4 h-4 text-white" />
+            </button>
           </div>
         )}
       </div>

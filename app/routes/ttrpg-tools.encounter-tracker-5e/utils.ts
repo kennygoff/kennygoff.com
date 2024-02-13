@@ -43,3 +43,5 @@ export const clamp = function (value: number, min?: number, max?: number) {
 const alphabet =
   "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 export const generateShortId = customAlphabet(alphabet, 8);
+
+export type NotUndefined<T> = T extends undefined ? never : T;
