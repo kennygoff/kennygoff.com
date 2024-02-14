@@ -13,9 +13,9 @@ const inputRegex = /^(?:(\dd\d+(?::(?:adv|dis))?)|\d|[\(|\)|\/|\*|\+|\-\ ])+$/;
 // const diceNotationRegex = /(?:(\dd\d+(?::(?:adv|dis))?))/;
 /* eslint-enable no-useless-escape */
 
-const safeEval = (expr: string): number | null => {
+export const safeEval = (expr: string): number | null => {
   try {
-    return evaluate(expr);
+    return evaluate(expr) ?? null;
   } catch {
     return null;
   }
