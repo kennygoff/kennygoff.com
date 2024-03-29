@@ -7,17 +7,20 @@ original: https://medium.com/@kennygoff/a-new-freelancers-guide-to-freelancing-f
 meta:
   - title: "Freelance, burnout, and Double Turn: 4 Years of Inwave Labs"
   - name: description
-    content:
-      "Reflections on four years running Inwave Labs, my small indie game
-      development studio, and freelancing along the way"
+    content: >
+      Reflections on four years running Inwave Labs, my small indie game
+      development studio, and freelancing along the way
 ---
 
-import { PostCallout } from "~/components/post-callout";
-import { PostDate } from "~/components/post-date";
+export const meta = frontmatter.meta;
+export const headers = frontmatter.headers;
 
-# {attributes.title}
+import { PostCallout } from "../components/post-callout";
+import { PostDate } from "../components/post-date";
 
-<PostDate date={attributes.published} />
+# {frontmatter.title}
+
+<PostDate date={frontmatter.published} />
 
 <PostCallout
   title={`Content warning`}

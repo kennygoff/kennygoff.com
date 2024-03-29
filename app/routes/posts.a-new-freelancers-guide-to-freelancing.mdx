@@ -7,20 +7,24 @@ original: https://medium.com/@kennygoff/a-new-freelancers-guide-to-freelancing-f
 meta:
   - title: "A new freelancer's guide to freelancing"
   - name: description
-    content:
-      "Advice about getting into freelancing, from a new freelancer. Including
-      best ways to get started, set your prices, and sharing your work."
+    content: >
+      Advice about getting into freelancing, from a new freelancer. Including
+      best ways to get started, set your prices, and sharing your work
 ---
 
-import { PostCallout } from "~/components/post-callout";
-import { PostDate } from "~/components/post-date";
+export const meta = frontmatter.meta;
+export const headers = frontmatter.headers;
 
-# {attributes.title}
+import { PostCallout } from "../components/post-callout";
+import { PostDate } from "../components/post-date";
+import { formatDate } from "../utils/format-date";
 
-<PostDate date={attributes.published} />
+# {frontmatter.title}
+
+<PostDate date={frontmatter.published} />
 
 <PostCallout
-  title={`Update ${attributes.updated.toLocaleDateString()}`}
+  title={`Update ${formatDate(frontmatter.updated)}`}
   content="I'm no longer freelancing! I really enjoyed the experience but after a solid 2 years I've decided to look for fulltime employment once again. I still wholehartedly agree with this post so I will keep it up for anyone who is thinking of going freelancing and wants some advice to get started!"
 />
 
