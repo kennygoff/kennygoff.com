@@ -6,7 +6,7 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import inspect from "vite-plugin-inspect";
 import { visualizer } from "rollup-plugin-visualizer";
-import { netlifyPlugin } from "@netlify/remix-adapter/plugin";
+import { netlifyPlugin } from "@netlify/remix-edge-adapter/plugin";
 
 export default defineConfig((env) => ({
   server: {
