@@ -5,13 +5,17 @@ updated: 2023-04-11
 meta:
   - title: "Helpful Notion features for running D&D Campaigns"
   - name: description
-    content: "6 features in Notion to help you build, plan, and run your TTRPG and D&D
-    campaigns. Plus a handy template to help get started."
+    content: >
+      6 features in Notion to help you build, plan, and run your TTRPG and D&D
+      campaigns - plus a handy template to help get started
 ---
 
-import { LinkButton } from "~/components/link-button";
+export const meta = frontmatter.meta;
+export const headers = frontmatter.headers;
 
-# {attributes.title}
+import { LinkButton } from "../components/link-button";
+
+# {frontmatter.title}
 
 Notion is one of my favorite tools for running D&D campaigns. I use it in a lot
 of [different ways](/using-notion-dm-screen). It's great not just for note
@@ -74,7 +78,7 @@ emphasized within the page. Callouts are great for important information within
 a page and I use them when planning dungeons and encounters to callout traps,
 hidden enemies, secret doors, difficult terrain and more. It makes it really
 easy to notice when scanning through my notes on a dungeon that a particular
-area has some surprises or attributes the characters need to know — or not know.
+area has some surprises or frontmatter the characters need to know — or not know.
 
 ![Screenshot of example callouts](/images/articles/notion-features-for-running-dnd/tip-4-callouts.png)
 
