@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/deno";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 
 import { LinkButton } from "~/components/link-button";

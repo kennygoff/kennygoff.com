@@ -1,4 +1,4 @@
-import { json } from "@remix-run/node";
+import { json } from "@remix-run/deno";
 import { Link } from "@remix-run/react";
 import { Footer } from "~/components/footer";
 
