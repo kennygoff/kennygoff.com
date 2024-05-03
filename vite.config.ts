@@ -12,15 +12,6 @@ export default defineConfig((env) => ({
   server: {
     port: 3000,
   },
-  // build: {
-  //   rollupOptions: {
-  //     output: {
-  //       manualChunks: {
-  //         mathjs: ["mathjs"],
-  //       },
-  //     },
-  //   },
-  // },
   plugins: [
     inspect(),
     mdx({
