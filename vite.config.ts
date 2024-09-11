@@ -8,7 +8,7 @@ import inspect from "vite-plugin-inspect";
 import { visualizer } from "rollup-plugin-visualizer";
 import { netlifyPlugin } from "@netlify/remix-adapter/plugin";
 
-export default defineConfig((env) => ({
+export default defineConfig(() => ({
   server: {
     port: 3000,
   },
