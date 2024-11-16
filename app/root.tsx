@@ -9,7 +9,13 @@ import {
 import stylesheet from "~/tailwind.css?url";
 import Fathom from "~/components/fathom";
 
-export const meta: MetaFunction = () => [{ title: "Kenny Goff" }];
+export const meta: MetaFunction = () => [
+  { title: "Kenny Goff" },
+  {
+    property: "og:image",
+    content: "https://www.kennygoff.com/social.png",
+  },
+];
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
