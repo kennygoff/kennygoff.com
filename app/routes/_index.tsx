@@ -27,7 +27,11 @@ export default function Index() {
       <main className="max-w-6xl m-auto p-4">
         <section className="text my-16 sm:my-16 md:my-24 max-w-md">
           <h1 className="mb-4 text-4xl font-bold">
-            Hey! I'm <span className="text-white font-black">Kenny</span> ✌️
+            Hey! I'm{" "}
+            <span className="text-white font-black border-b-4 border-sky-500 relative">
+              Kenny
+            </span>{" "}
+            ✌️
           </h1>
           <h1 className="mb-3 text-2xl font-medium">
             I'm a creative developer in Brooklyn
