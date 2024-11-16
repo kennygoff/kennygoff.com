@@ -6,7 +6,7 @@ export default function Posts() {
     <div className="">
       <header className="max-w-6xl mx-auto p-4 flex flex-row gap-2 items-center">
         <Link to="/">
-          <span className="font-extrabold text-lg">Kenny Goff</span>
+          <span className="font-semibold text-lg">Kenny Goff</span>
         </Link>
       </header>
       <main className="max-w-6xl mx-auto p-4">
