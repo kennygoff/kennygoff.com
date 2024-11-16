@@ -13,7 +13,7 @@ export const meta: MetaFunction = () => [
   { title: "Kenny Goff" },
   {
     property: "og:image",
-    content: "https://www.kennygoff.com/images/social.png",
+    content: "https://kennygoff.com/images/social.png",
   },
 ];
 

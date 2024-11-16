@@ -1,9 +1,8 @@
-import { json } from "@remix-run/node";
 import { Link } from "@remix-run/react";
 import { Footer } from "~/components/footer";
 
 export const loader = () => {
-  return json(null, { status: 404 });
+  return { status: 404 };
 };
 
 export default function PageNotFound() {

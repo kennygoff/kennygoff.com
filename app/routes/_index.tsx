@@ -14,6 +14,10 @@ export const meta: MetaFunction = () => [
     content:
       "Kenny Goff is a creative developer. He's a web developer, game developer, and TTRPG game master.",
   },
+  {
+    property: "og:image",
+    content: "https://kennygoff.com/images/social.png",
+  },
 ];
 
 export default function Index() {
