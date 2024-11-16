@@ -4,13 +4,15 @@ import { EnvelopeIcon } from "@heroicons/react/24/outline";
 
 import { LinkButton } from "~/components/link-button";
 import { Footer } from "~/components/footer";
+import { BlueskyIcon } from "~/components/icons/bluesky";
+import { GitHubIcon } from "~/components/icons/github";
 
 export const meta: MetaFunction = () => [
-  { title: "Kenny Goff | Designer, developer, and TTRPG game master" },
+  { title: "Kenny Goff - Creative developer and TTRPG game master" },
   {
     name: "description",
     content:
-      "Kenny Goff is a designer and developer. He's a web engineer, TTRPG game master, and runs an indie game and product development studio.",
+      "Kenny Goff is a creative developer. He's a web developer, game developer, and TTRPG game master.",
   },
 ];
 
@@ -18,33 +20,43 @@ export default function Index() {
   return (
     <div className="md:py-0">
       <header className="max-w-6xl m-auto p-4 md:py-4">
-        <Link to="/">
-          <img src="/images/logo-square.svg" className="w-8 h-8" alt="Home" />
+        <Link to="/" className="text-white hover:text-sky-400">
+          <span className="font-semibold text-lg">Kenny Goff</span>
         </Link>
       </header>
       <main className="max-w-6xl m-auto p-4">
         <section className="text my-16 sm:my-16 md:my-24 max-w-md">
-          <p className="mb-3">Hey! 👋</p>
-          <h1 className="mb-3">
-            I'm <span className="text-white font-semibold">Kenny Goff</span>, a
-            creative developer.
+          <h1 className="mb-4 text-4xl font-bold">
+            Hey! I'm <span className="text-white font-black">Kenny</span> ✌️
           </h1>
-          <p className="mb-3">
-            I enjoy building tools to save time and designing games to spend it.
-            I'm a senior web engineer, a TTRPG game master, and a dive bar dart
-            player. I run an independent software company,{" "}
+          <h1 className="mb-3 text-2xl font-medium">
+            I'm a creative developer in Brooklyn
+          </h1>
+          <p className="mb-2">
+            I'm a web developer, game developer, and TTRPG game master. I enjoy
+            building tools and games. I currently work at Shopify as a senior
+            engineer.
+          </p>
+          <p className="flex flex-row gap-3">
             <a
-              href="https://inwavelabs.com"
-              className="text-white font-semibold underline"
+              className="text-sm font-semibold gap-1.5 hover:text-sky-400 inline-flex group"
+              href="https://bsky.app/profile/kennygoff.com"
             >
-              Inwave Labs
+              <BlueskyIcon />
+              <span>Bluesky</span>
             </a>
-            .
+            <a
+              className="text-sm font-semibold gap-1.5 hover:text-sky-400 inline-flex group"
+              href="https://github.com/kennygoff"
+            >
+              <GitHubIcon />
+              <span>GitHub</span>
+            </a>
           </p>
         </section>
         <section className="mb-12">
-          <h2 className="mb-4 font-semibold text-white text-xl">My projects</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <h2 className="mb-4 font-semibold text-white text-xl">Projects</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div>
               <img
                 src="/images/project-5ecampaignwiki.png"
@@ -146,8 +158,7 @@ export default function Index() {
               digital garden
             </a>{" "}
             than a chronological blog, so I'll keep this section updated over
-            time with my favorite posts, musings, ideas, and advice. It's an
-            ever evolving project as is the rest of this site.
+            time with my favorite posts, musings, ideas, and advice.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 [grid-template-rows:masonry]">
             <div className="border border-slate-600 rounded-lg overflow-hidden">
@@ -157,14 +168,11 @@ export default function Index() {
               <ul className="px-3 py-2 [&>li]:py-1 list-disc ml-4">
                 <li>
                   <Link
-                    to="/digital-dice-vs-physical-dice"
+                    to="/beyond-wave-echo-cave"
                     className="underline font-semibold"
                   >
-                    Digital dice vs physical dice
-                  </Link>{" "}
-                  {/* <span className="rounded ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
-                    New
-                  </span> */}
+                    Beyond Wave Echo Cave: Expanding Lost Mines of Phandelver
+                  </Link>
                 </li>
                 <li>
                   <Link
@@ -184,19 +192,22 @@ export default function Index() {
                 </li>
                 <li>
                   <Link
-                    to="/beyond-wave-echo-cave"
-                    className="underline font-semibold"
-                  >
-                    Beyond Wave Echo Cave: Expanding Lost Mines of Phandelver
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     to="/using-notion-dm-screen"
                     className="underline font-semibold"
                   >
                     Using Notion as a DM Screen
                   </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/digital-dice-vs-physical-dice"
+                    className="underline font-semibold"
+                  >
+                    Digital dice vs physical dice
+                  </Link>{" "}
+                  {/* <span className="rounded ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
+                    New
+                  </span> */}
                 </li>
               </ul>
             </div>
@@ -241,15 +252,27 @@ export default function Index() {
               className="rounded-full w-20 h-20"
             />
             <div>
-              <h2 className="font-bold mb-1">Want to chat?</h2>
-              <p>If you'd like to get in touch, shoot me an email!</p>
-              <a
-                className="text-sm font-semibold mt-4 gap-1 hover:text-sky-400 text-white hover:underline inline-flex"
-                href="mailto:hi@kennygoff.com"
-              >
-                <EnvelopeIcon className="h-5 w-5" />
-                <span>hi@kennygoff.com</span>
-              </a>
+              <h2 className="font-bold mb-1">Find me on the internet</h2>
+              <p>
+                If you'd like to get in touch you can shoot me an email or
+                connect with me on Bluesky
+              </p>
+              <div className="flex flex-col mt-4 gap-1">
+                <a
+                  className="text-sm font-semibold gap-1 hover:text-sky-400 text-white hover:underline inline-flex"
+                  href="mailto:hi@kennygoff.com"
+                >
+                  <EnvelopeIcon className="h-5 w-5" />
+                  <span>hi@kennygoff.com</span>
+                </a>
+                <a
+                  className="text-sm font-semibold gap-1 hover:text-sky-400 text-white hover:underline inline-flex group"
+                  href="https://bsky.app/profile/kennygoff.com"
+                >
+                  <BlueskyIcon />
+                  <span>@kennygoff.com</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>
