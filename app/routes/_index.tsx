@@ -166,7 +166,7 @@ export default function Index() {
               digital garden
             </a>{" "}
             than a chronological blog, so I'll keep this section updated over
-            time with my favorite posts, musings, ideas, and advice.
+            time with my favorite posts.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 [grid-template-rows:masonry]">
             <div className="border border-slate-600 rounded-lg overflow-hidden">
