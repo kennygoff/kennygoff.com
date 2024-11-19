@@ -29,21 +29,22 @@ export default function Index() {
         </Link>
       </header>
       <main className="max-w-6xl m-auto p-4">
-        <section className="text my-16 sm:my-16 md:my-24 max-w-md">
+        <section className="text my-16 sm:my-16 md:my-24">
           <h1 className="mb-4 text-4xl font-bold">
-            Hey! I'm{" "}
-            <span className="text-white font-black border-b-4 border-sky-500 relative">
-              Kenny
-            </span>{" "}
-            ✌️
+            Hey! My name is{" "}
+            <span className="text-nowrap">
+              <span className="text-white font-black border-b-4 border-sky-500 relative">
+                Kenny
+              </span>{" "}
+              ✌️
+            </span>
           </h1>
-          <h1 className="mb-3 text-2xl font-medium">
+          <h1 className="mb-3 text-xl sm:text-2xl font-semibold">
             I'm a creative developer in Brooklyn
           </h1>
-          <p className="mb-2">
-            I'm a web developer, game developer, and TTRPG game master. I enjoy
-            building tools and games. I currently work at Shopify as a senior
-            engineer.
+          <p className="mb-2 max-w-md">
+            I'm a software developer and TTRPG game master. I love building
+            tools and games. I currently work at Shopify as a frontend engineer.
           </p>
           <p className="flex flex-row gap-3">
             <a
