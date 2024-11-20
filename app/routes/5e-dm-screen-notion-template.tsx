@@ -18,7 +18,7 @@ export default function Articles() {
   return (
     <div className="">
       <Header />
-      <main className="max-w-6xl mx-auto p-4">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6">
         <h1 className="mb-4 font-semibold text-white text-3xl">
           5e DM Screen for Notion
         </h1>
