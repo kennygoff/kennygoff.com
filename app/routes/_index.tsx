@@ -23,13 +23,13 @@ export const meta: MetaFunction = () => [
 export default function Index() {
   return (
     <div className="md:py-0">
-      <header className="max-w-6xl m-auto p-4 md:py-4">
+      <header className="max-w-6xl m-auto px-4 sm:px-6 py-2 sm:py-4">
         <Link to="/" className="text-white hover:text-sky-400">
           <span className="font-semibold text-lg">Kenny Goff</span>
         </Link>
       </header>
-      <main className="max-w-6xl m-auto p-4">
-        <section className="text my-16 sm:my-16 md:my-24">
+      <main className="max-w-6xl m-auto px-4 sm:px-6">
+        <section className="text py-12 sm:py-12 md:py-12">
           <h1 className="mb-4 text-4xl font-bold">
             Hey! My name is{" "}
             <span className="text-nowrap">
@@ -63,7 +63,7 @@ export default function Index() {
             </a>
           </p>
         </section>
-        <section className="mb-12">
+        <section className="mb-12 mt-6">
           <h2 className="mb-4 font-semibold text-white text-xl">Projects</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div>
