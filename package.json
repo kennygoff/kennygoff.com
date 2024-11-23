@@ -6,7 +6,7 @@
     "dev": "react-router dev",
     "dev:netlify": "cross-env NODE_ENV=development node netlify/dev-server.js",
     "build": "react-router build && node netlify/prepare.js",
-    "debug": "NODE_OPTIONS='--inspect-brk' remix vite:dev",
+    "debug": "NODE_OPTIONS='--inspect-brk' react-router dev",
     "start": "netlify serve",
     "typecheck": "react-router typegen && tsc --build --noEmit",
     "lint": "eslint .",
