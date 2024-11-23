@@ -38,6 +38,6 @@ export default [
     },
   },
   {
-    ignores: ["build/**", "public/**", ".netlify/**"],
+    ignores: ["build/**", "public/**", ".netlify/**", ".react-router/**"],
   },
 ];
