@@ -23,7 +23,7 @@ export default [
     rules: {
       "react/jsx-uses-react": "error",
       "react/jsx-uses-vars": "error",
-      "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
+      "@typescript-eslint/consistent-type-definitions": "off",
       "@typescript-eslint/no-unused-vars": [
         "error",
         {
@@ -38,6 +38,12 @@ export default [
     },
   },
   {
-    ignores: ["build/**", "public/**", ".netlify/**", ".react-router/**"],
+    ignores: [
+      "build/**",
+      "public/**",
+      ".netlify/**",
+      ".react-router/**",
+      "netlify/",
+    ],
   },
 ];

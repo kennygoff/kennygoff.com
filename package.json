@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
-    "dev:netlify": "cross-env NODE_ENV=development node ./dev-server.js",
+    "dev:netlify": "cross-env NODE_ENV=development node netlify/dev-server.js",
     "build": "react-router build && node netlify/prepare.js",
     "debug": "NODE_OPTIONS='--inspect-brk' remix vite:dev",
     "start": "netlify serve",
