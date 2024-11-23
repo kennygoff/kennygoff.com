@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 
 export const Footer = () => (
   <footer className="max-w-6xl mx-auto flex flex-col pt-4 pb-16 justify-between text-sm">

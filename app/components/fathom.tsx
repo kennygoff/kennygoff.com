@@ -1,4 +1,4 @@
-import { useLocation } from "@remix-run/react";
+import { useLocation } from "react-router";
 import { load, trackPageview } from "fathom-client";
 import { useEffect, useRef } from "react";
 
