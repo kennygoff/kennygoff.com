@@ -19,7 +19,11 @@ export default function App() {
   return (
     <html lang="en" className="bg-slate-900 text-slate-200">
       <head>
+        {/* Swapped them back */}
         {/* Swapped the order of meta and link tags https://github.com/remix-run/remix/issues/9242#issuecomment-2466234861 */}
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Meta />
         <Links />
         <link
           rel="apple-touch-icon"
@@ -39,9 +43,6 @@ export default function App() {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Meta />
       </head>
       <body>
         <Outlet />
