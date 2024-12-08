@@ -6,7 +6,7 @@ My personal website on the internet.
 
 ## Stack
 
-- 🛠️ Build with [Remix](https://remix.run) & [React](https://react.dev/)
+- 🛠️ Build with [React Router](https://reactrouter.com) & [React](https://react.dev/)
 - 💅 Styled with [Tailwind](https://tailwindcss.com/)
 - 🚀 Deployed on [Netlify](https://www.netlify.com/)
 

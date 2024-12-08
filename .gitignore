@@ -4,5 +4,7 @@ node_modules
 /public/build
 /build
 /.netlify
+/.react-router
 .env
 .DS_Store
+tsconfig.tsbuildinfo
