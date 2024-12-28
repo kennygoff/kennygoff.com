@@ -68,6 +68,27 @@ export default function Index() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div>
               <img
+                src="/images/project-encounter-clash.png"
+                alt="Screenshot of 5e Campaign Wiki template"
+                className="rounded-xl mb-6 aspect-video"
+                width="640"
+                height="360"
+              />
+              <h3 className="font-bold text-white my-2 text-lg">
+                Encounter Clash
+              </h3>
+              <p className="my-2">
+                A combat encounter tracker for 5e. Setup your encounters and
+                track initiative, HP, and monsters quickly.
+              </p>
+              <div className="flex flex-col gap-2 sm:flex-row mt-4">
+                <LinkButton href="https://sidequest.tools">
+                  Visit sidequest.tools &rarr;
+                </LinkButton>
+              </div>
+            </div>
+            <div>
+              <img
                 src="/images/project-5ecampaignwiki.png"
                 alt="Screenshot of 5e Campaign Wiki template"
                 className="rounded-xl mb-6 aspect-video"
