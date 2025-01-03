@@ -247,6 +247,11 @@ export default function Index() {
               </h3>
               <ul className="px-3 py-2 [&>li]:py-1 list-disc ml-4">
                 <li>
+                  <Link to="/2025-bingo" className="underline font-semibold">
+                    2025 Bingo
+                  </Link>
+                </li>
+                <li>
                   <Link
                     to="/posts/a-new-freelancers-guide-to-freelancing"
                     className="underline font-semibold"
