@@ -79,7 +79,7 @@ const bingo = [
       id: "movies",
       description: "Go to the movies",
       emoji: "🍿",
-      completed: false,
+      completed: true,
     },
     { id: "park-day", description: "Park day", emoji: "🌳", completed: false },
     {
