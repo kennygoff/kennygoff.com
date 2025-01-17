@@ -21,7 +21,7 @@ const bingo = [
       id: "kids-on-bikes",
       description: "Run a Kids on Bikes session",
       emoji: "🚲",
-      completed: false,
+      completed: true,
     },
     {
       id: "publish-adventure",
