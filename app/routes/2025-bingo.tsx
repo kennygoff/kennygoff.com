@@ -15,7 +15,7 @@ const bingo = [
       id: "shadowdark",
       description: "Run a Shadowdark session",
       emoji: "🗡️",
-      completed: false,
+      completed: true,
     },
     {
       id: "kids-on-bikes",
@@ -33,7 +33,7 @@ const bingo = [
       id: "irl-session",
       description: "Run an in-person session",
       emoji: "📖",
-      completed: false,
+      completed: true,
     },
     {
       id: "release-tool",
