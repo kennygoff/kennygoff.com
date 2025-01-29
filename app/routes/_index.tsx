@@ -82,8 +82,24 @@ export default function Index() {
                 track initiative, HP, and monsters quickly.
               </p>
               <div className="flex flex-col gap-2 sm:flex-row mt-4">
-                <LinkButton href="https://sidequest.tools">
-                  Visit sidequest.tools &rarr;
+                <LinkButton href="https://sidequest.tool/encounter-clash">
+                  Visit Encounter Clash &rarr;
+                </LinkButton>
+              </div>
+            </div>
+            <div>
+              <img
+                src="/images/project-dice-roller.png"
+                alt="Screenshot of 5e Campaign Wiki template"
+                className="rounded-xl mb-6 aspect-video"
+                width="640"
+                height="360"
+              />
+              <h3 className="font-bold text-white my-2 text-lg">Dice Roller</h3>
+              <p className="my-2">A simple dice roller for TTRPGs</p>
+              <div className="flex flex-col gap-2 sm:flex-row mt-4">
+                <LinkButton href="https://sidequest.tools/dice-roller">
+                  Visit Dice Roller &rarr;
                 </LinkButton>
               </div>
             </div>
