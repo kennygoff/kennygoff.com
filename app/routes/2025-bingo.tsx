@@ -184,7 +184,10 @@ export default function Bingo2025() {
       </div>
       <div className="grid grid-cols-5">
         {headers.map((header) => (
-          <div className="bg-cyan-500 text-center content-center text-black font-black text-xl py-2">
+          <div
+            className="bg-cyan-500 text-center content-center text-black font-black text-xl py-2"
+            key={header.letter}
+          >
             {header.letter}
             <div className="text-sm font-semibold text-cyan-900">
               ({header.category})
@@ -200,6 +203,7 @@ export default function Bingo2025() {
                 "text-center content-center bg-slate-300 text-black p-2",
                 cell.completed && "bg-green-400",
               )}
+              key={cell.id}
             >
               <div className="text-3xl">{cell.emoji}</div>
               <div
