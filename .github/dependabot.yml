@@ -1,0 +1,58 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "07:00"
+      timezone: "America/New_York"
+    groups:
+      dev:
+        dependency-type: "development"
+        exclude-patterns:
+          - "@react-router/*"
+          - "react-router"
+          - "@tailwindcss/*"
+          - "tailwindcss"
+        update-types:
+          - "patch"
+          - "minor"
+      patch:
+        dependency-type: "production"
+        update-types:
+          - "patch"
+        exclude-patterns:
+          - "@react-router/*"
+          - "react-router"
+          - "@tailwindcss/*"
+          - "tailwindcss"
+      minor:
+        dependency-type: "production"
+        update-types:
+          - "minor"
+        exclude-patterns:
+          - "@react-router/*"
+          - "react-router"
+          - "@tailwindcss/*"
+          - "tailwindcss"
+      react-router:
+        patterns:
+          - "@react-router/*"
+          - "react-router"
+        update-types:
+          - "patch"
+          - "minor"
+      tailwind-css:
+        patterns:
+          - "@tailwindcss/*"
+          - "tailwindcss"
+        update-types:
+          - "patch"
+          - "minor"
+      react-router-major:
+        patterns:
+          - "@react-router/*"
+          - "react-router"
+        update-types:
+          - "major"
