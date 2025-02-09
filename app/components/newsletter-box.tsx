@@ -30,12 +30,12 @@ export const NewsletterBox = () => (
           type="email"
           name="email"
           placeholder="you@example.com"
-          className="rounded px-3 py-1.5 text-slate-50 bg-slate-900 border-slate-600 border flex-grow text-base"
+          className="rounded-sm px-3 py-1.5 text-slate-50 bg-slate-900 border-slate-600 border grow text-base"
         />
         <input
           type="submit"
           value="Subscribe"
-          className="bg-sky-600 hover:bg-sky-700 rounded px-3 py-1.5 font-bold text-base hover:shadow-sm hover:cursor-pointer self-start"
+          className="bg-sky-600 hover:bg-sky-700 rounded-sm px-3 py-1.5 font-bold text-base hover:shadow-xs hover:cursor-pointer self-start"
         />
       </div>
     </form>
