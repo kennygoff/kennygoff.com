@@ -125,7 +125,7 @@ export default function Index() {
                   Get 5e Campaign Wiki &rarr;
                 </LinkButton>
                 <Link
-                  className="text-sm font-bold sm:inline-block text-slate-100 hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded block text-center"
+                  className="text-sm font-bold sm:inline-block text-slate-100 hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded-sm block text-center"
                   to="/5e-campaign-wiki-notion-template"
                 >
                   Learn more &rarr;
@@ -153,7 +153,7 @@ export default function Index() {
                   Get 5e DM Screen &rarr;
                 </LinkButton>
                 <Link
-                  className="text-sm font-bold sm:inline-block text-slate-100 hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded block text-center"
+                  className="text-sm font-bold sm:inline-block text-slate-100 hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded-sm block text-center"
                   to="/5e-dm-screen-notion-template"
                 >
                   Learn more &rarr;
@@ -183,7 +183,7 @@ export default function Index() {
                   Buy on Steam &rarr;
                 </LinkButton>
                 <a
-                  className="text-sm font-bold sm:inline-block text-slate-100 hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded block text-center"
+                  className="text-sm font-bold sm:inline-block text-slate-100 hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded-sm block text-center"
                   href="https://doubleturngame.com"
                 >
                   Learn more &rarr;
@@ -251,7 +251,7 @@ export default function Index() {
                   >
                     Digital dice vs physical dice
                   </Link>{" "}
-                  {/* <span className="rounded ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
+                  {/* <span className="rounded-sm ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
                     New
                   </span> */}
                 </li>
