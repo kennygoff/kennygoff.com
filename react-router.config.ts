@@ -6,7 +6,6 @@ export default {
       "/",
       "/5e-campaign-wiki-notion-template",
       "/5e-dm-screen-notion-template",
-      "/2025-bingo",
       // Articles
       "/beyond-wave-echo-cave",
       "/digital-dice-vs-physical-dice",

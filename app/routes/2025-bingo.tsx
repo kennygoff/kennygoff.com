@@ -240,6 +240,7 @@ export default function Bingo2025() {
             year: "numeric",
             month: "long",
             day: "numeric",
+            timeZone: "America/New_York",
           },
         ).format(new Date())}`}</div>
         <div className="z-20">{`${percentagePassed}% of 2025 has passed, I have completed ${completed}/25 squares and have ${bingos} BINGOs`}</div>
