@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { twMerge } from "tailwind-merge";
 
@@ -148,13 +149,26 @@ const bingo = [
 ];
 
 export default function Bingo2025() {
-  const percentagePassed = (
-    ((new Date().getTime() - new Date("2025-01-01").getTime()) /
-      (new Date("2026-01-01").getTime() - new Date("2025-01-01").getTime())) *
-    100
-  ).toFixed(2);
+  const [percentagePassed, setPercentagePassed] = useState<string>(
+    (
+      ((new Date().getTime() - new Date("2025-01-01").getTime()) /
+        (new Date("2026-01-01").getTime() - new Date("2025-01-01").getTime())) *
+      100
+    ).toFixed(2),
+  );
   const completed = bingo.flat().filter(({ completed }) => completed).length;
   const bingos = 0;
+
+  useEffect(() => {
+    setPercentagePassed(
+      (
+        ((new Date().getTime() - new Date("2025-01-01").getTime()) /
+          (new Date("2026-01-01").getTime() -
+            new Date("2025-01-01").getTime())) *
+        100
+      ).toFixed(2),
+    );
+  });
 
   return (
     <main className="h-screen grid grid-cols-1 grid-rows-[0fr_0fr_1fr_0fr] bg-slate-800">
