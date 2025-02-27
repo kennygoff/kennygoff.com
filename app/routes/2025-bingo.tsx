@@ -244,8 +244,8 @@ export default function Bingo2025() {
         ).format(new Date())}`}</div>
         <div className="z-20">{`${percentagePassed}% of 2025 has passed, I have completed ${completed}/25 squares and have ${bingos} BINGOs`}</div>
         <div
-          className={`absolute bg-emerald-500 top-0 left-0 bottom-0 z-0`}
-          style={{ width: `${percentagePassed}%` }}
+          className={`absolute bg-emerald-500`}
+          style={{ width: `${percentagePassed}%`, top: 0, left: 0, bottom: 0 }}
         />
       </div>
     </main>
