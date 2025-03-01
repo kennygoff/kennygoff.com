@@ -40,7 +40,7 @@ const bingo = [
       id: "release-tool",
       description: "Release a TTRPG tool",
       emoji: "🚀",
-      completed: false,
+      completed: true,
     },
   ],
   [
