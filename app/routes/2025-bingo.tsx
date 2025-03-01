@@ -60,7 +60,7 @@ const bingo = [
       id: "vinyl",
       description: "Buy a vinyl album",
       emoji: "🔊",
-      completed: false,
+      completed: true,
     },
     {
       id: "drums",
