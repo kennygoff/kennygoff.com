@@ -82,7 +82,7 @@ export default function Index() {
                 track initiative, HP, and monsters quickly.
               </p>
               <div className="flex flex-col gap-2 sm:flex-row mt-4">
-                <LinkButton href="https://sidequest.tool/encounter-clash">
+                <LinkButton href="https://sidequest.tools/encounter-clash">
                   Visit Encounter Clash &rarr;
                 </LinkButton>
               </div>
