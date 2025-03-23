@@ -48,7 +48,7 @@ const bingo = [
       id: "show",
       description: "Go to a touring band's show",
       emoji: "🎸",
-      completed: false,
+      completed: true,
     },
     {
       id: "local-show",
