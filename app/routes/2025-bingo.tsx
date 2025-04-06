@@ -111,7 +111,7 @@ const bingo = [
       completed: false,
     },
     { id: "darts", description: "Throw darts", emoji: "🎯", completed: true },
-    { id: "pool", description: "Play pool", emoji: "🎱", completed: false },
+    { id: "pool", description: "Play pool", emoji: "🎱", completed: true },
     { id: "bowling", description: "Go bowling", emoji: "🎳", completed: false },
   ],
   [
