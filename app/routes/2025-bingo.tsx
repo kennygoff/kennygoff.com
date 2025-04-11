@@ -28,7 +28,7 @@ const bingo = [
       id: "publish-adventure",
       description: "Self-publish an adventure",
       emoji: "📝",
-      completed: false,
+      completed: true,
     },
     {
       id: "irl-session",
@@ -157,7 +157,7 @@ export default function Bingo2025() {
     ).toFixed(2),
   );
   const completed = bingo.flat().filter(({ completed }) => completed).length;
-  const bingos = 0;
+  const bingos = 1;
 
   useEffect(() => {
     setPercentagePassed(
@@ -232,8 +232,13 @@ export default function Bingo2025() {
           )),
         )}
       </div>
-      <div className="p-4 text-center relative">
-        <div className="z-20 font-semibold">{`Today is ${new Intl.DateTimeFormat(
+      <div
+        className="p-4 text-center"
+        style={{
+          backgroundImage: `linear-gradient(90deg,var(--color-emerald-500) 0%,var(--color-emerald-500) ${percentagePassed}%,transparent ${percentagePassed}%,transparent 100%)`,
+        }}
+      >
+        <div className="font-semibold">{`Today is ${new Intl.DateTimeFormat(
           "en-US",
           {
             weekday: "long",
@@ -243,11 +248,7 @@ export default function Bingo2025() {
             timeZone: "America/New_York",
           },
         ).format(new Date())}`}</div>
-        <div className="z-20">{`${percentagePassed}% of 2025 has passed, I have completed ${completed}/25 squares and have ${bingos} BINGOs`}</div>
-        <div
-          className={`absolute bg-emerald-500`}
-          style={{ width: `${percentagePassed}%`, top: 0, left: 0, bottom: 0 }}
-        />
+        <div>{`${percentagePassed}% of 2025 has passed, I have completed ${completed}/25 squares and have ${bingos} BINGOs`}</div>
       </div>
     </main>
   );
