@@ -87,7 +87,7 @@ const bingo = [
       id: "free-space",
       description: "Take a long weekend off",
       emoji: "🌴",
-      completed: false,
+      completed: true,
     },
     {
       id: "montreal",
