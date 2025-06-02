@@ -143,7 +143,7 @@ const bingo = [
       id: "drizzle",
       description: "Make something with Drizzle",
       emoji: "🌧️",
-      completed: false,
+      completed: true,
     },
   ],
 ];
