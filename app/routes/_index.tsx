@@ -291,6 +291,14 @@ export default function Index() {
                     Dark mode and Stripe mode
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/breaking-board-game-conventions"
+                    className="underline font-semibold"
+                  >
+                    Breaking board game conventions
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
