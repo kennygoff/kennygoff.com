@@ -7,6 +7,7 @@ import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { reactRouterDevTools } from "react-router-devtools";
 
 export default defineConfig(({ isSsrBuild }) => ({
   test: {
@@ -20,6 +21,7 @@ export default defineConfig(({ isSsrBuild }) => ({
       : undefined,
   },
   plugins: [
+    reactRouterDevTools(),
     inspect(),
     mdx({
       remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
