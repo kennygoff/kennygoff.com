@@ -99,7 +99,7 @@ const bingo = [
       id: "seattle",
       description: "Go to Seattle",
       emoji: "⛰️",
-      completed: false,
+      completed: true,
     },
   ],
   [
