@@ -8,6 +8,6 @@ export const Footer = () => (
         Kenny Goff
       </Link>
     </div>
-    <div className="text-center text-slate-400">Kenny Goff © 2017-2024</div>
+    <div className="text-center text-slate-400">Kenny Goff © 2017-2025</div>
   </footer>
 );
