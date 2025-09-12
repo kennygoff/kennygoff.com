@@ -44,7 +44,7 @@ export default function Index() {
           </h1>
           <p className="mb-2 max-w-md">
             I'm a software developer and TTRPG game master. I love building
-            tools and games. I currently work at Shopify as a frontend engineer.
+            tools and games.
           </p>
           <p className="flex flex-row gap-3">
             <a
