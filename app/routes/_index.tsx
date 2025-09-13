@@ -306,7 +306,7 @@ export default function Index() {
         <section>
           <div className="p-6 bg-slate-700 rounded-xl my-12 flex flex-col sm:flex-row sm:items-center gap-4 sm:max-w-lg sm:mx-auto">
             <img
-              src="/images/kg-160.jpg"
+              src="/images/kgo.jpg"
               alt="Photograph of Kenny Goff"
               className="rounded-full w-20 h-20"
             />
