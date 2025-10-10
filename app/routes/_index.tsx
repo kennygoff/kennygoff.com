@@ -192,19 +192,45 @@ export default function Index() {
             </div>
           </div>
         </section>
+
+        <section className="mb-12">
+          <h2 className="mb-4 font-semibold text-white text-xl">
+            TTRPG Writing
+          </h2>
+          <p className="mb-2">
+            Here's some of the adventures I've written for TTRPGs!
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 [grid-template-rows:masonry]">
+            <div className="border border-slate-600 rounded-lg overflow-hidden">
+              <h3 className="px-3 py-1 bg-slate-600 font-semibold text-white text-sm">
+                D&D Adventures
+              </h3>
+              <ul className="px-3 py-2 [&>li]:py-1 list-disc ml-4">
+                <li>
+                  <Link
+                    to="https://sidequesters.club/adventures/trouble-in-waterlily"
+                    className="underline font-semibold"
+                  >
+                    Trouble in Waterlily
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="https://site.dmsguild.com/product/539739/The-Firework-Goblins"
+                    className="underline font-semibold"
+                  >
+                    The Firework Goblins
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section className="mb-12">
           <h2 className="mb-4 font-semibold text-white text-xl">Articles</h2>
           <p className="mb-2">
             Here's a collection of articles I've written, spanning a few
-            different topics. I treat this much more like a{" "}
-            <a
-              href="https://joelhooks.com/digital-garden"
-              className="underline"
-            >
-              digital garden
-            </a>{" "}
-            than a chronological blog, so I'll keep this section updated over
-            time with my favorite posts.
+            different topics.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 [grid-template-rows:masonry]">
             <div className="border border-slate-600 rounded-lg overflow-hidden">
