@@ -105,63 +105,6 @@ export default function Index() {
             </div>
             <div>
               <img
-                src="/images/project-5ecampaignwiki.png"
-                alt="Screenshot of 5e Campaign Wiki template"
-                className="rounded-xl mb-6 aspect-video"
-                width="640"
-                height="360"
-              />
-              <h3 className="font-bold text-white my-2 text-lg">
-                5e Campaign Wiki for Notion
-              </h3>
-              <p className="my-2">
-                A Notion template to help you run your 5e campaign. Set up with
-                ready-to-use databases for players, NPCs, session notes,
-                encounters and more. Plan and run your games with ease all
-                within Notion.
-              </p>
-              <div className="flex flex-col gap-2 sm:flex-row mt-4">
-                <LinkButton href="https://kennygoff.notion.site/5e-Campaign-Wiki-2234b289a06d47c6967a99a934864c6a">
-                  Get 5e Campaign Wiki &rarr;
-                </LinkButton>
-                <Link
-                  className="text-sm font-bold sm:inline-block text-slate-100 hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded-sm block text-center"
-                  to="/5e-campaign-wiki-notion-template"
-                >
-                  Learn more &rarr;
-                </Link>
-              </div>
-            </div>
-            <div>
-              <img
-                src="/images/project-5edmscreen.png"
-                alt="Screenshot of 5e DM Screen template"
-                className="rounded-xl mb-6 aspect-video"
-                width="640"
-                height="360"
-              />
-              <h3 className="font-bold text-white my-2 text-lg">
-                5e DM Screen for Notion
-              </h3>
-              <p className="my-2">
-                A DM Screen and 5e quick reference in a Notion template. Quickly
-                look up 5e rules, player stats, and more in this digital DM
-                screen that is easy to extend and modify.
-              </p>
-              <div className="flex flex-col gap-2 sm:flex-row mt-4">
-                <LinkButton href="https://kennygoff.notion.site/5e-DM-Screen-Template-94918eaae3024973831d3eae4d7810b1">
-                  Get 5e DM Screen &rarr;
-                </LinkButton>
-                <Link
-                  className="text-sm font-bold sm:inline-block text-slate-100 hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded-sm block text-center"
-                  to="/5e-dm-screen-notion-template"
-                >
-                  Learn more &rarr;
-                </Link>
-              </div>
-            </div>
-            <div>
-              <img
                 src="/images/dt-preview.png"
                 alt="Screenshot of pixel art wrestling game, Double Turn"
                 className="rounded-xl mb-6 aspect-video"
@@ -170,9 +113,7 @@ export default function Index() {
               />
               <h3 className="font-bold text-white my-2 text-lg">Double Turn</h3>
               <p className="my-2">
-                A pro-wrestling fighting game. I designed and programmed Double
-                Turn with the help of an artist and sound design team. It's out
-                now on{" "}
+                A pro-wrestling fighting game. Out now on{" "}
                 <a href="https://store.steampowered.com/app/762680/Double_Turn/">
                   Steam
                 </a>{" "}
