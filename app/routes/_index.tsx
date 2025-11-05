@@ -141,12 +141,20 @@ export default function Index() {
           <p className="mb-2">
             Here's some of the adventures I've written for TTRPGs!
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 [grid-template-rows:masonry]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 grid-rows-[masonry]">
             <div className="border border-slate-600 rounded-lg overflow-hidden">
               <h3 className="px-3 py-1 bg-slate-600 font-semibold text-white text-sm">
                 D&D Adventures
               </h3>
               <ul className="px-3 py-2 [&>li]:py-1 list-disc ml-4">
+                <li>
+                  <Link
+                    to="https://www.dmsguild.com/en/product/544474/baldur-s-gate-the-vault-of-marvels"
+                    className="underline font-semibold"
+                  >
+                    Baldur's Gate: The Vault of Marvels
+                  </Link>
+                </li>
                 <li>
                   <Link
                     to="https://sidequesters.club/adventures/trouble-in-waterlily"
@@ -173,7 +181,7 @@ export default function Index() {
             Here's a collection of articles I've written, spanning a few
             different topics.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 [grid-template-rows:masonry]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 grid-rows-[masonry]">
             <div className="border border-slate-600 rounded-lg overflow-hidden">
               <h3 className="px-3 py-1 bg-slate-600 font-semibold text-white text-sm">
                 Running D&D and TTRPGs
