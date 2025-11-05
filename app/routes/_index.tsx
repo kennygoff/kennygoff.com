@@ -25,46 +25,57 @@ export default function Index() {
     <div className="md:py-0">
       <header className="max-w-6xl m-auto px-4 sm:px-6 py-2 sm:py-4">
         <Link to="/" className="text-white hover:text-sky-400">
-          <span className="font-semibold text-lg">Kenny Goff</span>
+          ✌️{" "}
+          <span className="text-lg font-black font-vollkorn">Kenny Goff</span>
         </Link>
       </header>
       <main className="max-w-6xl m-auto px-4 sm:px-6">
-        <section className="text py-12 sm:py-12 md:py-12">
-          <h1 className="mb-4 text-4xl font-bold">
-            Hey! My name is{" "}
-            <span className="text-nowrap">
-              <span className="text-white font-black border-b-4 border-sky-500 relative">
-                Kenny
-              </span>{" "}
-              ✌️
-            </span>
-          </h1>
-          <h1 className="mb-3 text-xl sm:text-2xl font-semibold">
-            I'm a creative developer in Brooklyn
-          </h1>
-          <p className="mb-2 max-w-md">
-            I'm a software developer and TTRPG game master. I love building
-            tools and games.
-          </p>
-          <p className="flex flex-row gap-3">
-            <a
-              className="text-sm font-semibold gap-1.5 hover:text-sky-400 inline-flex group"
-              href="https://bsky.app/profile/kennygoff.com"
-            >
-              <BlueskyIcon />
-              <span>Bluesky</span>
-            </a>
-            <a
-              className="text-sm font-semibold gap-1.5 hover:text-sky-400 inline-flex group"
-              href="https://github.com/kennygoff"
-            >
-              <GitHubIcon />
-              <span>GitHub</span>
-            </a>
-          </p>
+        <section className="text py-12 sm:py-12 md:py-12 flex flex-col md:flex-row gap-6">
+          <div className="relative group">
+            <div className="absolute aspect-square top-0 left-0 -z-10 rounded-lg w-32 h-32 md:w-48 md:h-48 bg-sky-500 rotate-0 scale-100 group-hover:rotate-6 group-hover:scale-110 duration-200" />
+            <img
+              src="/images/kgo.jpg"
+              alt="Photograph of Kenny Goff"
+              className="rounded-lg w-32 h-32 md:w-48 md:h-48 z-10 scale-100 group-hover:scale-105 duration-200 shadow block"
+            />
+          </div>
+          <div>
+            <h1 className="mb-2 text-5xl font-bold">
+              <span className="text-nowrap">
+                <span className="text-white font-black relative">
+                  Kenny Goff
+                </span>
+              </span>
+            </h1>
+            <h1 className="font-vollkorn mb-4 text-xl sm:text-2xl font-bold italic text-slate-200">
+              creative developer & game designer
+            </h1>
+            <p className="mb-2 max-w-md">
+              I'm a software developer, designer, and writer. I love building
+              tools and making games.
+            </p>
+            <p className="flex flex-row gap-3">
+              <a
+                className="text-sm font-semibold gap-1.5 hover:text-sky-400 inline-flex group"
+                href="https://bsky.app/profile/kennygoff.com"
+              >
+                <BlueskyIcon />
+                <span>Bluesky</span>
+              </a>
+              <a
+                className="text-sm font-semibold gap-1.5 hover:text-sky-400 inline-flex group"
+                href="https://github.com/kennygoff"
+              >
+                <GitHubIcon />
+                <span>GitHub</span>
+              </a>
+            </p>
+          </div>
         </section>
         <section className="mb-12 mt-6">
-          <h2 className="mb-4 font-semibold text-white text-xl">Projects</h2>
+          <h2 className="mb-4 font-bold text-white text-2xl font-vollkorn">
+            Projects
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div>
               <img
@@ -84,22 +95,6 @@ export default function Index() {
               <div className="flex flex-col gap-2 sm:flex-row mt-4">
                 <LinkButton href="https://sidequest.tools/encounter-clash">
                   Visit Encounter Clash &rarr;
-                </LinkButton>
-              </div>
-            </div>
-            <div>
-              <img
-                src="/images/project-dice-roller.png"
-                alt="Screenshot of 5e Campaign Wiki template"
-                className="rounded-xl mb-6 aspect-video"
-                width="640"
-                height="360"
-              />
-              <h3 className="font-bold text-white my-2 text-lg">Dice Roller</h3>
-              <p className="my-2">A simple dice roller for TTRPGs</p>
-              <div className="flex flex-col gap-2 sm:flex-row mt-4">
-                <LinkButton href="https://sidequest.tools/dice-roller">
-                  Visit Dice Roller &rarr;
                 </LinkButton>
               </div>
             </div>
@@ -133,9 +128,8 @@ export default function Index() {
             </div>
           </div>
         </section>
-
         <section className="mb-12">
-          <h2 className="mb-4 font-semibold text-white text-xl">
+          <h2 className="mb-4 font-bold text-white text-2xl font-vollkorn">
             TTRPG Writing
           </h2>
           <p className="mb-2">
@@ -154,6 +148,9 @@ export default function Index() {
                   >
                     Baldur's Gate: The Vault of Marvels
                   </Link>
+                  <span className="rounded-sm ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
+                    New
+                  </span>
                 </li>
                 <li>
                   <Link
@@ -176,7 +173,9 @@ export default function Index() {
           </div>
         </section>
         <section className="mb-12">
-          <h2 className="mb-4 font-semibold text-white text-xl">Articles</h2>
+          <h2 className="mb-4 font-bold text-white text-2xl font-vollkorn">
+            Articles
+          </h2>
           <p className="mb-2">
             Here's a collection of articles I've written, spanning a few
             different topics.
@@ -226,9 +225,6 @@ export default function Index() {
                   >
                     Digital dice vs physical dice
                   </Link>{" "}
-                  {/* <span className="rounded-sm ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
-                    New
-                  </span> */}
                 </li>
               </ul>
             </div>
@@ -278,13 +274,60 @@ export default function Index() {
             </div>
           </div>
         </section>
+
+        <section className="mb-12">
+          <h2 className="mb-4 font-bold text-white text-2xl font-vollkorn">
+            About me
+          </h2>
+          <p className="mb-6">
+            Hello there! My name is Kenny Goff and I'm based in Brooklyn. I
+            enjoy building useful tools with a high level of quality and
+            usability as well as playful games and experiences.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="border-l-4 border-sky-400 p-3 pl-4 rounded bg-slate-800">
+              <h3 className="font-bold italic text-xl font-vollkorn mb-1">
+                Multi-disciplinary developer
+              </h3>
+              <p className="mb-2">
+                I've been a professional software engineer for over 10 years. I
+                like wearing multiple hats and doing both the design and
+                development work of products and sites. I run an independent
+                software company and freelance at{" "}
+                <Link to="https://inwavelabs.com" className="underline">
+                  Inwave Labs
+                </Link>
+                .
+              </p>
+            </div>
+            <div className="border-l-4 border-sky-400 p-3 pl-4 rounded bg-slate-800">
+              <h3 className="font-bold italic text-xl font-vollkorn mb-1">
+                GM & TTRPG writer
+              </h3>
+              <p className="mb-2">
+                I'm a game master for games like <em>Dungeons & Dragons</em>,{" "}
+                <em>Shadowdark</em>, and <em>Blades in the Dark</em>. I also
+                write adventures and self-publish under my indie press{" "}
+                <Link to="https://sidequesters.club" className="underline">
+                  Sidequesters Club
+                </Link>
+                .
+              </p>
+            </div>
+            <div className="border-l-4 border-sky-400 p-3 pl-4 rounded bg-slate-800">
+              <h3 className="font-bold italic text-xl font-vollkorn mb-1">
+                Quality craftwork
+              </h3>
+              <p className="mb-2">
+                All my work is made with pride and craft. I aim for a high level
+                of quality, usability, and polish. I don't use generative AI in
+                the process or development of any of my projects.
+              </p>
+            </div>
+          </div>
+        </section>
         <section>
           <div className="p-6 bg-slate-700 rounded-xl my-12 flex flex-col sm:flex-row sm:items-center gap-4 sm:max-w-lg sm:mx-auto">
-            <img
-              src="/images/kgo.jpg"
-              alt="Photograph of Kenny Goff"
-              className="rounded-full w-20 h-20"
-            />
             <div>
               <h2 className="font-bold mb-1">Find me on the internet</h2>
               <p>
