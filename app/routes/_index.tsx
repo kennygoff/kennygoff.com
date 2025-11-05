@@ -149,7 +149,7 @@ export default function Index() {
               <ul className="px-3 py-2 [&>li]:py-1 list-disc ml-4">
                 <li>
                   <Link
-                    to="https://www.dmsguild.com/en/product/544474/baldur-s-gate-the-vault-of-marvels"
+                    to="https://www.dmsguild.com/product/544474/baldur-s-gate-the-vault-of-marvels"
                     className="underline font-semibold"
                   >
                     Baldur's Gate: The Vault of Marvels
