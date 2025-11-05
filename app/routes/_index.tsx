@@ -74,7 +74,7 @@ export default function Index() {
         </section>
         <section className="mb-12 mt-6">
           <h2 className="mb-4 font-bold text-white text-2xl font-vollkorn">
-            Projects
+            Apps & Games
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div>
