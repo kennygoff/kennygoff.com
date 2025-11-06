@@ -299,6 +299,17 @@ export default function Index() {
                 </Link>
                 .
               </p>
+              <div className="flex flex-col gap-2 sm:flex-row mt-4">
+                <LinkButton href="https://tally.so/r/Bz4Z7Q">
+                  Hire me &rarr;
+                </LinkButton>
+                <a
+                  className="text-sm font-bold sm:inline-block text-slate-100 hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded-sm block text-center"
+                  href="https://inwavelabs.com"
+                >
+                  Learn more &rarr;
+                </a>
+              </div>
             </div>
             <div className="border-l-4 border-sky-400 p-3 pl-4 rounded bg-slate-800">
               <h3 className="font-bold italic text-xl font-vollkorn mb-1">
@@ -329,7 +340,7 @@ export default function Index() {
         <section>
           <div className="p-6 bg-slate-700 rounded-xl my-12 flex flex-col sm:flex-row sm:items-center gap-4 sm:max-w-lg sm:mx-auto">
             <div>
-              <h2 className="font-bold mb-1">Find me on the internet</h2>
+              <h2 className="font-bold mb-1">Contact</h2>
               <p>
                 If you'd like to get in touch you can shoot me an email or
                 connect with me on Bluesky
