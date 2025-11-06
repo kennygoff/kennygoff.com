@@ -23,7 +23,7 @@ export const meta: MetaFunction = () => [
 export default function Index() {
   return (
     <div className="md:py-0">
-      <header className="max-w-6xl m-auto px-4 sm:px-6 py-2 sm:py-4">
+      <header className="max-w-6xl m-auto px-4 sm:px-6 py-4">
         <Link to="/" className="text-white hover:text-sky-400">
           ✌️{" "}
           <span className="text-lg font-black font-vollkorn">Kenny Goff</span>
