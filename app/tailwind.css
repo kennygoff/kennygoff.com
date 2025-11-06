@@ -1,8 +1,36 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Vollkorn&display=swap");
 
 @plugin '@tailwindcss/typography';
 
 @theme {
-  --font-vollkorn: "Vollkorn", serif;
+  --font-vollkorn:
+    "Vollkorn", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+@font-face {
+  font-family: "Vollkorn";
+  src:
+    url("/fonts/vollkorn/Vollkorn-Bold.woff2") format("woff2"),
+    url("/fonts/vollkorn/Vollkorn-Bold.woff") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Vollkorn";
+  src:
+    local("Vollkorn"),
+    local("Vollkorn-BoldItalic"),
+    url("/fonts/vollkorn/Vollkorn-BoldItalic.woff2") format("woff2"),
+    url("/fonts/vollkorn/Vollkorn-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Vollkorn";
+  src:
+    local("Vollkorn"),
+    local("Vollkorn-Black"),
+    url("/fonts/vollkorn/Vollkorn-Black.woff2") format("woff2"),
+    url("/fonts/vollkorn/Vollkorn-Black.woff") format("woff");
+  font-weight: 900;
 }
