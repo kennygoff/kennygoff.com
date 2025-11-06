@@ -10,8 +10,11 @@
 @font-face {
   font-family: "Vollkorn";
   src:
+    local("Vollkorn"),
+    local("Vollkorn-Bold"),
     url("/fonts/vollkorn/Vollkorn-Bold.woff2") format("woff2"),
-    url("/fonts/vollkorn/Vollkorn-Bold.woff") format("woff");
+    url("/fonts/vollkorn/Vollkorn-Bold.woff") format("woff"),
+    url("/fonts/vollkorn/Vollkorn-Bold.ttf") format("truetype");
   font-weight: 700;
 }
 @font-face {
@@ -20,7 +23,8 @@
     local("Vollkorn"),
     local("Vollkorn-BoldItalic"),
     url("/fonts/vollkorn/Vollkorn-BoldItalic.woff2") format("woff2"),
-    url("/fonts/vollkorn/Vollkorn-BoldItalic.woff") format("woff");
+    url("/fonts/vollkorn/Vollkorn-BoldItalic.woff") format("woff"),
+    url("/fonts/vollkorn/Vollkorn-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
 }
@@ -31,6 +35,7 @@
     local("Vollkorn"),
     local("Vollkorn-Black"),
     url("/fonts/vollkorn/Vollkorn-Black.woff2") format("woff2"),
-    url("/fonts/vollkorn/Vollkorn-Black.woff") format("woff");
+    url("/fonts/vollkorn/Vollkorn-Black.woff") format("woff"),
+    url("/fonts/vollkorn/Vollkorn-Black.ttf") format("truetype");
   font-weight: 900;
 }
