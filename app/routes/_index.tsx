@@ -303,12 +303,6 @@ export default function Index() {
                 <LinkButton href="https://tally.so/r/Bz4Z7Q">
                   Hire me &rarr;
                 </LinkButton>
-                <a
-                  className="text-sm font-bold sm:inline-block text-slate-100 hover:bg-slate-600 active:bg-slate-600 py-2 px-3 bg-slate-500 rounded-sm block text-center"
-                  href="https://inwavelabs.com"
-                >
-                  Learn more &rarr;
-                </a>
               </div>
             </div>
             <div className="border-l-4 border-sky-400 p-3 pl-4 rounded bg-slate-800">
