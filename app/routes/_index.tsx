@@ -307,19 +307,40 @@ export default function Index() {
             </div>
             <div className="border-l-4 border-sky-400 p-3 pl-4 rounded bg-slate-800">
               <h3 className="font-bold italic text-xl font-vollkorn mb-1">
-                GM & TTRPG writer
+                TTRPG designer & writer
               </h3>
               <p className="mb-2">
-                I'm a game master for games like <em>Dungeons & Dragons</em>,{" "}
-                <em>Shadowdark</em>, and <em>Blades in the Dark</em>. I also
-                write adventures and self-publish under my indie press{" "}
+                I write adventures and self-publish under my indie press{" "}
                 <Link to="https://sidequesters.club" className="underline">
                   Sidequesters Club
                 </Link>
-                .
+                . I like to give game masters the foundation for crafting an
+                entertaining story with their players, simple to read and adapt
+                to any table.
               </p>
+              <div className="flex flex-col gap-2 sm:flex-row mt-4">
+                <LinkButton href="https://sidequesters.club">
+                  View adventures &rarr;
+                </LinkButton>
+              </div>
             </div>
             <div className="border-l-4 border-sky-400 p-3 pl-4 rounded bg-slate-800">
+              <h3 className="font-bold italic text-xl font-vollkorn mb-1">
+                Experienced Game Master
+              </h3>
+              <p className="mb-2">
+                I'm a game master for games like <em>Dungeons & Dragons</em>,{" "}
+                <em>Shadowdark</em>, and <em>Blades in the Dark</em>. I have 4
+                years of experience running games from one-shots to long-running
+                2+ year campaigns.
+              </p>
+              <div className="flex flex-col gap-2 sm:flex-row mt-4">
+                <LinkButton href="https://startplaying.games/gm/kennygoff">
+                  StartPlaying profile &rarr;
+                </LinkButton>
+              </div>
+            </div>
+            {/* <div className="border-l-4 border-sky-400 p-3 pl-4 rounded bg-slate-800">
               <h3 className="font-bold italic text-xl font-vollkorn mb-1">
                 Quality craftwork
               </h3>
@@ -328,7 +349,7 @@ export default function Index() {
                 of quality, usability, and polish. I don't use generative AI in
                 the process or development of any of my projects.
               </p>
-            </div>
+            </div> */}
           </div>
         </section>
         <section>
