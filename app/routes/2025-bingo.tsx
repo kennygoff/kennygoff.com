@@ -54,7 +54,7 @@ const bingo = [
       id: "local-show",
       description: "Go to a local band's show",
       emoji: "🎤",
-      completed: false,
+      completed: true,
     },
     {
       id: "vinyl",
@@ -157,7 +157,7 @@ export default function Bingo2025() {
     ).toFixed(2),
   );
   const completed = bingo.flat().filter(({ completed }) => completed).length;
-  const bingos = 1;
+  const bingos = 2;
 
   useEffect(() => {
     setPercentagePassed(
