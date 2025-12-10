@@ -188,6 +188,17 @@ export default function Index() {
               <ul className="px-3 py-2 [&>li]:py-1 list-disc ml-4">
                 <li>
                   <Link
+                    to="/2025-ttrpg-reflections"
+                    className="underline font-semibold"
+                  >
+                    2025 TTRPG Reflections
+                  </Link>
+                  <span className="rounded-sm ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
+                    New
+                  </span>
+                </li>
+                <li>
+                  <Link
                     to="/beyond-wave-echo-cave"
                     className="underline font-semibold"
                   >
