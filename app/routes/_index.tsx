@@ -245,6 +245,14 @@ export default function Index() {
               </h3>
               <ul className="px-3 py-2 [&>li]:py-1 list-disc ml-4">
                 <li>
+                  <Link to="/2026-bingo" className="underline font-semibold">
+                    2026 Bingo
+                  </Link>
+                  <span className="rounded-sm ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
+                    New
+                  </span>
+                </li>
+                <li>
                   <Link to="/2025-bingo" className="underline font-semibold">
                     2025 Bingo
                   </Link>
