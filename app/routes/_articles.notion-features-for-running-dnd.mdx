@@ -30,6 +30,7 @@ export const meta = frontmatter.meta;
 export const headers = frontmatter.headers;
 
 import { LinkButton } from "../components/link-button";
+import { NewsletterBox } from "../components/newsletter-box";
 
 # {frontmatter.title}
 
@@ -130,8 +131,10 @@ if you like these ideas but don't want to go through the hassle of setting it
 all up yourself or want a base to work from, check out my template! Just visit
 the template below and duplicate!
 
-<p className="not-prose">
+<p className="not-prose mb-16">
   <LinkButton href="https://kennygoff.notion.site/5e-Campaign-Wiki-2234b289a06d47c6967a99a934864c6a">
     Get 5e Campaign Wiki &rarr;
   </LinkButton>
 </p>
+
+<NewsletterBox />
