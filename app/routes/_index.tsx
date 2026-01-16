@@ -143,14 +143,22 @@ export default function Index() {
               <ul className="px-3 py-2 [&>li]:py-1 list-disc ml-4">
                 <li>
                   <Link
+                    to="https://sidequesters.club/adventures/rumble-at-the-hog-and-hound"
+                    className="underline font-semibold"
+                  >
+                    Rumble at the Hog & Hound
+                  </Link>
+                  <span className="rounded-sm ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
+                    New
+                  </span>
+                </li>
+                <li>
+                  <Link
                     to="https://www.dmsguild.com/product/544474/baldur-s-gate-the-vault-of-marvels"
                     className="underline font-semibold"
                   >
                     Baldur's Gate: The Vault of Marvels
                   </Link>
-                  <span className="rounded-sm ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
-                    New
-                  </span>
                 </li>
                 <li>
                   <Link
