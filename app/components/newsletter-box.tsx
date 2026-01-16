@@ -1,25 +1,41 @@
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
+import { Link } from "react-router";
 
 export const NewsletterBox = () => (
   <section className="bg-slate-700 not-prose p-8 rounded-xl">
-    <h2 className="font-bold mb-5 text-2xl">
-      A newsletter for people who love running TTRPGs
-    </h2>
-    <p className="text-lg mb-5">
-      If you found this useful, want to learn more about DM tools, or just also
-      geek out about new ways to enhance running D&D &mdash; or other TTRPGs
-      &mdash; sign up for my newsletter! I talk weekly about tools, resources,
-      tips and advice for running D&D to make our time as DMs simpler so we can
-      build the best campaigns for our players.
+    <h2 className="font-bold mb-5 text-2xl">Join my GM newsletter!</h2>
+    <p className="text-lg mb-2">
+      A bi-weekly newsletter about tools, resources, and advice for making our
+      time as game masters simpler so we can build the best campaigns for our
+      players. I'll also send occasional updates highlighting new product
+      releases.
+    </p>
+    <p className="text-sm mb-5">
+      <Link
+        to="https://buttondown.com/sidequestersclub/archive/"
+        className="text-sky-500"
+      >
+        View the Archive
+      </Link>{" "}
+      &middot;{" "}
+      <Link
+        to="https://buttondown.com/sidequestersclub/rss"
+        className="text-sky-500"
+      >
+        Subscribe via RSS
+      </Link>
     </p>
     <form
-      action="https://buttondown.email/api/emails/embed-subscribe/kennygoff"
+      action="https://buttondown.email/api/emails/embed-subscribe/sidequestersclub"
       method="post"
       target="popupwindow"
+      onSubmit={() =>
+        window.open("https://buttondown.com/sidequestersclub", "popupwindow")
+      }
     >
       <label
         htmlFor="email"
-        className="font-semibold text-sm pt-1 pb-0.5 pl-2 flex gap-1 flex-row items-center"
+        className="font-semibold text-sm pt-1 pb-0.5 pl-1 flex gap-1 flex-row items-center"
       >
         <EnvelopeIcon className="w-4 h-4 inline" />
         <span>Email</span>

@@ -188,14 +188,22 @@ export default function Index() {
               <ul className="px-3 py-2 [&>li]:py-1 list-disc ml-4">
                 <li>
                   <Link
+                    to="/my-process-for-drawing-dungeons"
+                    className="underline font-semibold"
+                  >
+                    My Process for Drawing Dungeons
+                  </Link>
+                  <span className="rounded-sm ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
+                    New
+                  </span>
+                </li>
+                <li>
+                  <Link
                     to="/2025-ttrpg-reflections"
                     className="underline font-semibold"
                   >
                     2025 TTRPG Reflections
                   </Link>
-                  <span className="rounded-sm ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
-                    New
-                  </span>
                 </li>
                 <li>
                   <Link
@@ -248,9 +256,6 @@ export default function Index() {
                   <Link to="/2026-bingo" className="underline font-semibold">
                     2026 Bingo
                   </Link>
-                  <span className="rounded-sm ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
-                    New
-                  </span>
                 </li>
                 <li>
                   <Link to="/2025-bingo" className="underline font-semibold">
