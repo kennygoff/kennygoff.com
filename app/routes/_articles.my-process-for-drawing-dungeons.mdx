@@ -24,9 +24,12 @@ meta:
     content: https://kennygoff.com/images/og-images/my-process-for-drawing-dungeons.png
 ---
 
+export const meta = frontmatter.meta;
+export const headers = frontmatter.headers;
+
 import { NewsletterBox } from "../components/newsletter-box";
 
-# My Process for Drawing Dungeons
+# {frontmatter.title}
 
 I've been drawing dungeons for D&D for a little while now, and while I'm no
 [Dyson](https://dysonlogos.blog/), I have a process that I've pieced together
