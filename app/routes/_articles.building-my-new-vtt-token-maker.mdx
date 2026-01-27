@@ -1,0 +1,93 @@
+---
+title: "Building my new VTT Token Maker"
+published: 2026-01-29
+updated: 2026-01-29
+meta:
+  - title: "Building my new VTT Token Maker"
+  - name: description
+    content: >
+      Building my new VTT Token Maker
+  - property: og:title
+    content: "Building my new VTT Token Maker"
+  - property: og:description
+    content: >
+      Building my new VTT Token Maker
+  - property: og:image
+    content: https://kennygoff.com/images/og-images/building-my-new-vtt-token-maker.png
+  - property: og:type
+    content: website
+  - property: og:url
+    content: https://kennygoff.com/building-my-new-vtt-token-maker
+  - property: twitter:card
+    content: summary_large_image
+  - property: twitter:image
+    content: https://kennygoff.com/images/og-images/building-my-new-vtt-token-maker.png
+---
+
+export const meta = frontmatter.meta;
+export const headers = frontmatter.headers;
+
+import { NewsletterBox } from "../components/newsletter-box";
+
+# {frontmatter.title}
+
+I'm a big fan of simple tools that get the job done quickly and efficiently. I
+think
+[Owlbear Rodeo is the best VTT](https://kennygoff.com/owlbear-rodeo-the-painless-virtual-tabletop)
+because it does maps really well and gets out of the way.
+
+I've tried a few different token makers for VTTs and they've all had things I
+liked and things I didn't like. I make
+[my own TTRPG tools](https://sidequest.tools) so I figured I'd take a stab at my
+perfect VTT token maker.
+
+## The Problem
+
+I do my monster prep in batches and I'm normally making a bunch of tokens at
+once before my games. I like using official monster when available and my
+players give me their own character art. I don't like fancy borders, I really
+just need a plain colored border: normally black, sometimes I'll color match to
+make all enemies red, all allies blue, etc.
+
+I don't _ever_ use AI generated art but I will search around for art since most
+of the time it's just for personal use at my home games. I'm not too concerned
+that the art matches a specific style, just that they generally match the idea
+of the monster.
+
+Whatever I use needs to:
+
+1. Handle a bunch of images quickly
+2. Retain border style across all tokens
+3. Make scale/positioning edits really fast
+4. Retain filenames
+
+The tools I've tried normally get 2-3 of these things right, but not all and it
+always makes token creation a bit of a chore.
+
+## The Solution
+
+I built a new tool for [Sidequest Tools](https://sidequest.tools) that is geared
+around solving those 4 problems. To use the tool you:
+
+1. Drop in one or more files
+2. Apply a sane default border that is globally editable
+3. Make quick repositioning and scaling edits with drag and scroll on previews
+4. Export in a zip and retain the original filenames
+
+It's pretty fast and runs all in the browser, the files don't even get uploaded
+to a server, something I try to do where possible on Sidequest Tools.
+
+## The Future
+
+I plan on iterating on this further but right now it's already doing token
+creation faster and easier than the tools I used before.
+
+A few ideas of things I hope to tackle soon:
+
+- Dynamic image sizes for large+ monsters
+- Individual token renaming
+- Reusable custom "palettes"
+
+Try it out yourself and let me know what you think!
+
+<NewsletterBox />
