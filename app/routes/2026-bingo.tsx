@@ -28,7 +28,7 @@ const bingo = [
       id: "b-5",
       description: "Release a new tool",
       emoji: "🚀",
-      completed: false,
+      completed: true,
     },
     {
       id: "b-2",

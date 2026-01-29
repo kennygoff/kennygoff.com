@@ -196,14 +196,22 @@ export default function Index() {
               <ul className="px-3 py-2 [&>li]:py-1 list-disc ml-4">
                 <li>
                   <Link
+                    to="/building-my-new-vtt-token-maker"
+                    className="underline font-semibold"
+                  >
+                    Building my new VTT Token Maker
+                  </Link>
+                  <span className="rounded-sm ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
+                    New
+                  </span>
+                </li>
+                <li>
+                  <Link
                     to="/my-process-for-drawing-dungeons"
                     className="underline font-semibold"
                   >
                     My Process for Drawing Dungeons
                   </Link>
-                  <span className="rounded-sm ml-1 text-xs bg-emerald-600 text-white uppercase px-1.5 py-0.5 font-bold">
-                    New
-                  </span>
                 </li>
                 <li>
                   <Link
