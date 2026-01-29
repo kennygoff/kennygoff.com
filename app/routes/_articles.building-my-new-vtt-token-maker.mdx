@@ -34,18 +34,18 @@ import { NewsletterBox } from "../components/newsletter-box";
 I'm a big fan of simple tools that get the job done quickly and efficiently. I
 think
 [Owlbear Rodeo is the best VTT](https://kennygoff.com/owlbear-rodeo-the-painless-virtual-tabletop)
-because it does maps really well and gets out of the way.
+because it does maps really well and then gets out of the way.
 
-I've tried a few different token makers for VTTs and they've all had things I
-liked and things I didn't like. I make
+I've tried a few different token generators for VTTs and they've all had things
+I liked and things I didn't like. I make
 [my own TTRPG tools](https://sidequest.tools) so I figured I'd take a stab at my
 perfect VTT token maker.
 
 ## The Problem
 
 I do my monster prep in batches and I'm normally making a bunch of tokens at
-once before my games. I like using official monster art when available and my
-players give me their own character art. I don't like fancy borders, I really
+once before my games. I like using official D&D monster art when available and
+my players give me their own character art. I don't like fancy borders, I really
 just need a plain colored border; normally black, sometimes I'll color match to
 make all enemies red, all allies blue, etc.
 
@@ -57,9 +57,9 @@ of the monster.
 Whatever I use needs to:
 
 1. Handle a bunch of images quickly
-2. Retain border style across all tokens
+2. Use consistent border style across all tokens
 3. Make scale/positioning edits really fast
-4. Retain filenames
+4. Retain filenames from original images
 
 The tools I've tried normally get 2-3 of these things right, but not all and it
 always makes token creation a bit of a chore.
@@ -68,8 +68,9 @@ always makes token creation a bit of a chore.
 
 ## The Solution
 
-I built a new tool for [Sidequest Tools](https://sidequest.tools) that is geared
-around solving those 4 problems. To use the tool you:
+I built a new tool for Sidequest Tools called
+[Swift Token](https://sidequest.tools/swift-token) that is geared around solving
+those 4 problems. To use the tool you:
 
 1. Drop in one or more files
 2. Apply a sane default border that is globally editable
@@ -91,6 +92,7 @@ A few ideas of things I hope to tackle soon:
 - Dynamic image sizes for large+ monsters
 - Individual token renaming
 - Reusable custom "palettes"
+- Touch screen support for phones and tablets
 
 Try it out yourself and let me know what you think!
 
